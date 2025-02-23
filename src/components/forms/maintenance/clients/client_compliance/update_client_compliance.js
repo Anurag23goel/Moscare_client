@@ -16,6 +16,7 @@ import GppBadIcon from '@mui/icons-material/GppBad'; // Alert component for the 
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import CustomAgGridDataTable2 from "@/components/widgets/CustomAgGridDataTable2";
 import {Link, Plus, Unlink, UserPlus, Users} from "lucide-react";
+import { CustomBreadcrumbs } from "@/components/breadcrumbs/Breadcrumbs";
 
 const Alert = React.forwardRef(function Alert(props, ref) {
     return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
@@ -353,6 +354,7 @@ const UpdateClientCompliance = ({
             <div className="min-h-screen gradient-background">
 
                 <div className="max-w-7xl pt-24 mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div className="pl-1 mb-4"><CustomBreadcrumbs /></div>
                     <div className="flex items-center justify-between mb-8">
                         <div>
                             <h1 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">

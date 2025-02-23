@@ -92,7 +92,7 @@ const Importcsv = () => {
     <div>
       <div style={{ padding: "1rem", zIndex: "5" }}>
         <div>
-          <CustomBreadcrumbs />
+          <div className="pl-2 mb-3"><CustomBreadcrumbs /></div>
         </div>
         <Container>
           <Row className="mt-5">

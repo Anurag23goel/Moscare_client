@@ -1076,7 +1076,7 @@ const DataExport = () => {
                 </div>
 
                 {/* Main Content */}
-                <CustomBreadcrumbs />
+                <div className="pl-2 mb-3"><CustomBreadcrumbs /></div>
 
                 <div
                     className="glass dark:glass-dark rounded-2xl border border-gray-200/50 dark:border-gray-700/50 p-6 relative overflow-hidden">

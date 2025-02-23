@@ -9,7 +9,7 @@ const LocationRosterPage = () => {
     <div>
       {/*<DashMenu />*/}
       <Container className={styles.MainContainer}>
-        <CustomBreadcrumbs />
+        
         <LocationRoster />
       </Container>
     </div>

@@ -6,6 +6,7 @@ import {DndProvider, useDrag, useDrop} from 'react-dnd';
 import {HTML5Backend} from 'react-dnd-html5-backend';
 
 import {Briefcase, CheckCircle2, GripHorizontal, Plus, Save, Trash2, Users, X} from 'lucide-react';
+import { CustomBreadcrumbs } from "@/components/breadcrumbs/Breadcrumbs";
 
 export const fetchDocumentCategoryData = async () => {
     try {
@@ -374,6 +375,7 @@ const UpdateDocumentCategory = ({setDocumentCategoryData, documentCategoryData, 
         <DndProvider backend={HTML5Backend}>
             <div>
                 <div className="max-w-7xl pt-24 mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div className="pl-1 mb-4"><CustomBreadcrumbs /></div>
                     {/* Header */}
                     <div className="flex items-center justify-between mb-8">
                         <div>

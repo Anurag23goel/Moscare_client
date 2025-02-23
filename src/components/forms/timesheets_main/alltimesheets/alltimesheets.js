@@ -119,7 +119,7 @@ export default function AllTimesheet() {
         </div>
 
         {/* Date Range Selection */}
-        <CustomBreadcrumbs />
+        <div className="pl-2 mb-3"><CustomBreadcrumbs /></div>
 
         <div className="glass dark:glass-dark rounded-2xl border border-gray-200/50 dark:border-gray-700/50 p-6 mb-6 relative overflow-hidden">
           {/* <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-white/0 dark:from-black/0 dark:to-black/0 pointer-events-none" /> */}

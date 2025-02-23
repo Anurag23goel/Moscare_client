@@ -7,6 +7,7 @@ import UpdateContactType, {
 import EditModal from "@/components/widgets/EditModal";
 import {ValidationContext} from "@/pages/_app";
 import ValidationBar from "@/components/widgets/ValidationBar";
+import { CustomBreadcrumbs } from "@/components/breadcrumbs/Breadcrumbs";
 
 Modal.setAppElement("#__next");
 
@@ -99,7 +100,6 @@ const ContactType = () => {
     return (
         <div>
             <ValidationBar messages={validationMessages} onClose={handleCloseMessage}/>
-
             <UpdateContactType
                 contactTypeData={contactTypeData}
                 setContactTypeData={setContactTypeData}

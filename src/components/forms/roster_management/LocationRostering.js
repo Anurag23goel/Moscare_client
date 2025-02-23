@@ -20,6 +20,7 @@ import Cookies from "js-cookie";
 import ColorContext from "@/contexts/ColorContext";
 import CustomAgGridDataTable2 from "@/components/widgets/CustomAgGridDataTable2";
 import {PlusCircle} from "lucide-react";
+import { CustomBreadcrumbs } from "@/components/breadcrumbs/Breadcrumbs";
 
 const LocationRosterPage = () => {
     const [rows, setRows] = useState([]);
@@ -247,6 +248,7 @@ const LocationRosterPage = () => {
                     {!selectedRoster ? (
                         <>
                             <div className="max-w-7xl mx-auto px-4 pt-24 sm:px-6 lg:px-8 py-8">
+                                <div className="pl-2 mb-2"><CustomBreadcrumbs /></div>
                                 <div
                                     className="mt-8 glass dark:glass-dark rounded-2xl border border-gray-200/50 dark:border-gray-700/50 p-6 relative overflow-hidden">
                                     <CustomAgGridDataTable2

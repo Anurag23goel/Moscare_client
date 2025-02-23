@@ -1,10 +1,12 @@
-import React, {useContext, useEffect, useState} from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Modal from "react-modal";
-import {fetchUserRoles, postData} from "@/utility/api_utility";
+import { fetchUserRoles, postData } from "@/utility/api_utility";
 import ColorContext from "@/contexts/ColorContext";
-import UpdateAddress, {fetchAddressData,} from "@/components/forms/maintenance/addresses/update_address";
+import UpdateAddress, {
+  fetchAddressData,
+} from "@/components/forms/maintenance/addresses/update_address";
 import EditModal from "@/components/widgets/EditModal";
-import {ValidationContext} from "@/pages/_app";
+import { ValidationContext } from "@/pages/_app";
 import ValidationBar from "@/components/widgets/ValidationBar";
 import { CustomBreadcrumbs } from "@/components/breadcrumbs/Breadcrumbs";
 
@@ -27,12 +29,15 @@ const Address = () => {
 
   const [addressData, setAddressData] = useState([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const { addValidationMessage, validationMessages, handleCloseMessage } = useContext(ValidationContext);
+  const {
+    addValidationMessage,
+    validationMessages,
+    handleCloseMessage,
+  } = useContext(ValidationContext);
   const [errMsgs, setErrMsgs] = useState({});
   const [filteredStates, setFilteredStates] = useState([]);
   const [filteredSuburbs, setFilteredSuburbs] = useState([]);
   const [disableSection, setDisableSection] = useState(false);
-
 
   useEffect(() => {
     let mounted = true;
@@ -47,25 +52,65 @@ const Address = () => {
   }, []);
 
   // const { colors, loading } = useContext(ColorContext);
-    // if (loading) {
-    //     return <div>Loading...</div>;
-    // }
+  // if (loading) {
+  //     return <div>Loading...</div>;
+  // }
 
   const states = [
-    "New South Wales", "Victoria", "Queensland", "South Australia", "Western Australia",
-    "Tasmania", "Australian Capital Territory", "Northern Territory", "Auckland", "Wellington",
-    "Canterbury", "Waikato", "Otago", "Bay of Plenty", "Manawatu-Wanganui", "Hawke's Bay",
-    "Taranaki", "Northland", "Nelson", "Marlborough", "Southland"
+    "New South Wales",
+    "Victoria",
+    "Queensland",
+    "South Australia",
+    "Western Australia",
+    "Tasmania",
+    "Australian Capital Territory",
+    "Northern Territory",
+    "Auckland",
+    "Wellington",
+    "Canterbury",
+    "Waikato",
+    "Otago",
+    "Bay of Plenty",
+    "Manawatu-Wanganui",
+    "Hawke's Bay",
+    "Taranaki",
+    "Northland",
+    "Nelson",
+    "Marlborough",
+    "Southland",
   ];
   const allSuburbs = [
-    "Sydney", "Melbourne", "Brisbane", "Perth", "Adelaide",
-    "Hobart", "Canberra", "Darwin", "Gold Coast", "Newcastle",
-    "Wollongong", "Geelong", "Cairns", "Townsville", "Ballarat",
-    "Auckland", "Wellington", "Christchurch", "Hamilton", "Tauranga",
-    "Napier-Hastings", "Dunedin", "Palmerston North", "Rotorua", "New Plymouth",
-    "Whangarei", "Invercargill", "Nelson", "Whanganui", "Timaru"
+    "Sydney",
+    "Melbourne",
+    "Brisbane",
+    "Perth",
+    "Adelaide",
+    "Hobart",
+    "Canberra",
+    "Darwin",
+    "Gold Coast",
+    "Newcastle",
+    "Wollongong",
+    "Geelong",
+    "Cairns",
+    "Townsville",
+    "Ballarat",
+    "Auckland",
+    "Wellington",
+    "Christchurch",
+    "Hamilton",
+    "Tauranga",
+    "Napier-Hastings",
+    "Dunedin",
+    "Palmerston North",
+    "Rotorua",
+    "New Plymouth",
+    "Whangarei",
+    "Invercargill",
+    "Nelson",
+    "Whanganui",
+    "Timaru",
   ];
-
 
   const handleChange = ({ id, value }) => {
     const validators = {
@@ -75,14 +120,14 @@ const Address = () => {
     // Logic for handling the state search
     if (id === "state") {
       const searchTerm = value.toLowerCase().trim(); // User's input
-      console.log("search term: " + searchTerm)
+      console.log("search term: " + searchTerm);
       if (searchTerm === "") {
         // If no input, clear filtered states
         setFilteredStates([]);
       } else {
         // Filter states based on search term
-        const filteredStates = states.filter((state) =>
-          state.toLowerCase().includes(searchTerm) // Case-insensitive search
+        const filteredStates = states.filter(
+          (state) => state.toLowerCase().includes(searchTerm) // Case-insensitive search
         );
         setFilteredStates(filteredStates); // Update filtered states list
       }
@@ -102,8 +147,8 @@ const Address = () => {
         setFilteredSuburbs([]);
       } else {
         // Filter merged suburbs based on search term
-        const filteredSuburbsList = allSuburbs.filter((suburb) =>
-          suburb.toLowerCase().includes(searchTerm) // Case-insensitive search
+        const filteredSuburbsList = allSuburbs.filter(
+          (suburb) => suburb.toLowerCase().includes(searchTerm) // Case-insensitive search
         );
         setFilteredSuburbs(filteredSuburbsList); // Update filtered suburbs list
       }
@@ -133,7 +178,6 @@ const Address = () => {
     });
     setForm((prevState) => ({ ...prevState, [id]: value }));
   };
-
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -165,12 +209,10 @@ const Address = () => {
         clearForm();
         setShowForm(false);
         fetchAddressData().then((data) => setAddressData(data));
-        addValidationMessage("Address added successfully", "success")
-
+        addValidationMessage("Address added successfully", "success");
       } else {
         setOutput("Failed to add address");
-        addValidationMessage("Failed To add Address data", "error")
-
+        addValidationMessage("Failed To add Address data", "error");
       }
     } catch (error) {
       console.error(error);
@@ -200,61 +242,51 @@ const Address = () => {
     setShowForm(false);
   };
 
-
   const fields = [
     {
       label: "Unit No",
       type: "number",
       id: "unitNo",
-
     },
     {
       label: "Street No",
       type: "number",
       id: "streetNo",
-
     },
     {
       label: "Address Line 1",
       type: "text",
       id: "addressLine1",
-
     },
     {
       label: "Address Line 2",
       type: "text",
       id: "addressLine2",
-
     },
     {
       label: "Suburb",
       type: "text",
       id: "suburb",
-
     },
     {
       label: "State",
       type: "text",
       id: "state",
-
     },
     {
       label: "Postcode",
       type: "number",
       id: "postcode",
-
     },
     {
       label: "General Notes",
       type: "text",
       id: "generalNotes",
-
     },
     {
       label: "Identified Risks",
       type: "text",
       id: "identifiedRisks",
-
     },
   ];
 
@@ -270,20 +302,18 @@ const Address = () => {
 
   return (
     <div style={{ padding: "0 0rem" }}>
+      <ValidationBar
+        messages={validationMessages}
+        onClose={handleCloseMessage}
+      />
 
-
-      <ValidationBar messages={validationMessages} onClose={handleCloseMessage} />
-
-<CustomBreadcrumbs />
-      
+      <CustomBreadcrumbs />
 
       <UpdateAddress
         addressData={addressData}
         setAddressData={setAddressData}
         setShowForm={setShowForm}
       />
-
-    
 
       <EditModal
         show={showForm}
@@ -300,7 +330,6 @@ const Address = () => {
         setFilteredSuburbs={setFilteredSuburbs || []}
         disabled={disableSection}
       />
-
     </div>
   );
 };

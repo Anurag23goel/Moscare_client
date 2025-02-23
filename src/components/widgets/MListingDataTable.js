@@ -75,6 +75,7 @@ const DataGridComponent = ({getRowClassName, rows, rowSelected, notShowEditButto
 
     return (
         <div>
+            
             <div
                 className="glass dark:glass-dark rounded-2xl border border-gray-200/50 dark:border-gray-700/50 overflow-hidden relative">
                 <div

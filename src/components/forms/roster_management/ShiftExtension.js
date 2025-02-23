@@ -152,6 +152,7 @@ const ShiftExtensionDetailTable = () => {
                 </div>
 
                 {/* Controls */}
+                <div className="pl-2 mb-4"><CustomBreadcrumbs /></div>
                 <div
                     className="glass dark:glass-dark rounded-2xl border border-gray-200/50 dark:border-gray-700/50 p-6 mb-6 relative overflow-hidden">
                     <div
@@ -189,7 +190,7 @@ const ShiftExtensionDetailTable = () => {
                     </div>
                 </div>
 
-                <CustomBreadcrumbs />
+                
                 {/* Data Grid */}
                 <div
                     className="glass dark:glass-dark rounded-2xl border border-gray-200/50 dark:border-gray-700/50 p-6 relative overflow-hidden">

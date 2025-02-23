@@ -12,6 +12,7 @@ import EditModal from "@/components/widgets/EditModal";
 import {ValidationContext} from "@/pages/_app";
 import CustomAgGridDataTable2 from "@/components/widgets/CustomAgGridDataTable2";
 import {Link, Plus, Unlink, UserPlus, Users} from "lucide-react";
+import { CustomBreadcrumbs } from "@/components/breadcrumbs/Breadcrumbs";
 
 export const fetchComplianceItemsData = async () => {
     try {
@@ -552,6 +553,7 @@ const UpdateWorkerCompliance = ({
     return (
         <div className="min-h-screen gradient-background">
             <div className="max-w-7xl pt-24 mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div className="pl-1 mb-4"><CustomBreadcrumbs /></div>
                 <DialogBox open={dialog.open} onClose={closeDialog} title={dialog.title}>
                     {dialog.message}
                 </DialogBox>

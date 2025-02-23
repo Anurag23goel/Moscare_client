@@ -313,7 +313,7 @@ export default function WorkerProfile() {
           </div>
         </div>
 
-        <CustomBreadcrumbs />
+        <div className="pl-2 mb-3"><CustomBreadcrumbs /></div>
 
         {/* Main Content */}
         {loading ? (

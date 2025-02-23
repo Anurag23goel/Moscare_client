@@ -142,6 +142,7 @@ const UpdateComplianceTemplate = ({
 
     return (
         <Container>
+          
             <MListingDataTable
                 rows={complianceTemplateData?.data}
                 rowSelected={handleSelectRowClick}

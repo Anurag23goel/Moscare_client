@@ -10,7 +10,7 @@ const QuotesPage = () => {
       <div>
         {/*<DashMenu />*/}
         <Container className={styles.MainContainer}>
-          <CustomBreadcrumbs />
+          <div className="pl-4 mb-3"><CustomBreadcrumbs /></div>
           <ClientWorkerMap />
         </Container>
       </div>

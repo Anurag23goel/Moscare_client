@@ -481,7 +481,7 @@ const OnboardingPage = () => {
         </div>
       ))}
     </div> */}
-
+                    <div className="pl-2 mb-4"><CustomBreadcrumbs /></div>
                     {/* Status Tabs */}
                     <div
                         className="glass dark:glass-dark rounded-2xl border border-gray-200/50 dark:border-gray-700/50 p-2 mb-6 inline-flex gap-2">
@@ -506,7 +506,7 @@ const OnboardingPage = () => {
                     </div>
 
                     {/* Data Grid */}
-                    <CustomBreadcrumbs />
+                    
                     <div
                         className="glass dark:glass-dark rounded-2xl border border-gray-200/50 dark:border-gray-700/50 p-6 relative overflow-hidden">
                         <div

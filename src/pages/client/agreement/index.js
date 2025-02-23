@@ -143,7 +143,7 @@ const Agreement = () => {
         </Modal>
 
         <Container>
-          <CustomBreadcrumbs />
+          <div className="pl-2 mb-3"><CustomBreadcrumbs /></div>
           <MListingDataTable
             getRowClassName={getRowClassName}
             rows={agreements}

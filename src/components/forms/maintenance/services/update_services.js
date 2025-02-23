@@ -21,6 +21,7 @@ import {
     RefreshCw,
     Save,
 } from "lucide-react";
+import { CustomBreadcrumbs } from "@/components/breadcrumbs/Breadcrumbs";
 
 export const fetchServicesData = async () => {
     try {
@@ -534,9 +535,14 @@ const UpdateServices = ({
 
     return (
         <div className="min-h-screen  gradient-background">
+            
             <div className="max-w-7xl mx-auto px-4 pt-24 sm:px-6 lg:px-8 py-8">
+                
+            <div className="pl-1 mb-4"><CustomBreadcrumbs /></div>
                 {/* Top Buttons */}
                 {servicesData && (
+                    <>
+                    
                     <CustomAgGridDataTable2
                         title="Service"
                         primaryButton={{
@@ -549,8 +555,10 @@ const UpdateServices = ({
                         columns={columns}
                         rowSelected={handleSelectRowClick}
                         handleRowUnselected={handleRowUnselected}
-                    />
+                    /></>
+                    
                 )}
+                
                 <div className="flex flex-wrap items-center gap-4 mt-8 mb-8">
                     <button
                         onClick={() => {
@@ -612,6 +620,7 @@ const UpdateServices = ({
 
                 {/* <Grid container spacing={3} ref={scrollRef}> */}
                 {/* First Form */}
+                
                 <Grid item xs={12} md={4}>
                     <Box
                         className="glass"

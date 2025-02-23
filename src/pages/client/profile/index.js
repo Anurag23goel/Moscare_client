@@ -466,9 +466,7 @@ const ClientProfile = () => {
     <>
       {/*<Navbar />*/}
       <div className="min-h-screen pt-24 gradient-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <CustomBreadcrumbs />
-
+        <div className="max-w-7xl flex flex-col mx-auto px-4 sm:px-6 lg:px-8 py-8">
           {/* Header */}
           <div className="flex items-center justify-between mb-8">
             <div>
@@ -496,6 +494,10 @@ const ClientProfile = () => {
           </div>
 
           {/* Main Content */}
+          <div className="mb-3 pl-2">
+            <CustomBreadcrumbs />
+          </div>
+
           {loading ? (
             <div className="flex items-center justify-center h-[400px]">
               <div className="flex flex-col items-center gap-4">

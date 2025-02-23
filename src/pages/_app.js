@@ -81,8 +81,10 @@ export default function App({ Component, pageProps }) {
       <AuthProvider>
         <SocketContext.Provider value={socket}>
           <ValidationContext.Provider value={validationContextValue}>
-            {Cookies.get("User_ID") && <DashMenu />}
             <NotificationHandler socket={socket} />
+
+            {Cookies.get("User_ID") && <DashMenu />}
+
             <Component {...pageProps} />
           </ValidationContext.Provider>
         </SocketContext.Provider>

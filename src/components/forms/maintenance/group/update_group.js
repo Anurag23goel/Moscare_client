@@ -4,6 +4,7 @@ import EditModal from "@/components/widgets/EditModal";
 import {ValidationContext} from "@/pages/_app";
 import CustomAgGridDataTable2 from "@/components/widgets/CustomAgGridDataTable2";
 import {PlusCircle} from "lucide-react";
+import { CustomBreadcrumbs } from "@/components/breadcrumbs/Breadcrumbs";
 
 
 export const fetchGroupData = async () => {
@@ -144,6 +145,7 @@ const UpdateGroup = ({ groupData, setGroupData, setShowForm }) => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 pt-24 sm:px-6 lg:px-8 py-8">
+      <div className="pl-2"><CustomBreadcrumbs /></div>
       <div className="mt-8 glass dark:glass-dark rounded-2xl border border-gray-200/50 dark:border-gray-700/50 p-6 relative overflow-hidden">
 
         <CustomAgGridDataTable2

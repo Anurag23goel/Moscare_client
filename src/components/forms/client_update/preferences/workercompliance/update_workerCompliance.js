@@ -64,6 +64,7 @@ const UpdateCompliance = ({
 
     return (
         <div>
+            <div className="pl-1 mb-4"><CustomBreadcrumbs /></div>
             {/* <hr></hr> */}
             <p style={{
                 fontSize: "1rem", marginTop: "1rem", fontWeight: '800', borderBottom: "2px solid black",

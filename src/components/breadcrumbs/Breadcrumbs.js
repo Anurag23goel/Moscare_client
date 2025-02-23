@@ -1,13 +1,5 @@
 import { useRouter } from "next/router";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
-import React from "react";
+import { Breadcrumbs, Link, Typography } from "@mui/material";
 import {
   House,
   User,
@@ -17,6 +9,11 @@ import {
   Settings,
   UsersIcon,
 } from "lucide-react";
+
+function handleClick(event) {
+  event.preventDefault();
+  console.info("You clicked a breadcrumb.");
+}
 
 export function CustomBreadcrumbs() {
   const router = useRouter();
@@ -46,17 +43,17 @@ export function CustomBreadcrumbs() {
   };
 
   return (
-    <Breadcrumb className="border border-black px-10">
-      <BreadcrumbList>
-        {/* Home Link (Always Clickable) */}
-        <BreadcrumbItem>
-          <BreadcrumbLink
-            href="/"
-            className="text-black flex items-center gap-1 no-underline"
-          >
-            <House size={20} /> Home
-          </BreadcrumbLink>
-        </BreadcrumbItem>
+    <div role="presentation" onClick={handleClick}>
+      <Breadcrumbs aria-label="breadcrumb" separator="›">
+        {/* Home Link */}
+        <Link
+          underline="hover"
+          color="inherit"
+          href="/"
+          className="flex items-center gap-1"
+        >
+          <House size={20} /> Home
+        </Link>
 
         {pathSegments.map((segment, index) => {
           const path = `/${pathSegments.slice(0, index + 1).join("/")}`;
@@ -64,24 +61,27 @@ export function CustomBreadcrumbs() {
           const isLast = index === pathSegments.length - 1;
           const icon = getBreadcrumbIcon(segment);
 
-          return (
-            <React.Fragment key={path}>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                {isLast ? (
-                  <BreadcrumbPage className="flex flex-row items-center gap-1">
-                    {icon} {label}
-                  </BreadcrumbPage>
-                ) : (
-                  <span className="text-black flex items-center gap-1">
-                    {icon} {label}
-                  </span> // Non-clickable text with icon
-                )}
-              </BreadcrumbItem>
-            </React.Fragment>
+          return isLast ? (
+            <Typography
+              key={path}
+              sx={{ color: "text.primary" }}
+              className="flex items-center gap-1"
+            >
+              {icon} {label}
+            </Typography>
+          ) : (
+            <Link
+              key={path}
+              underline="hover"
+              color="inherit"
+              href={path}
+              className="flex items-center gap-1"
+            >
+              {icon} {label}
+            </Link>
           );
         })}
-      </BreadcrumbList>
-    </Breadcrumb>
+      </Breadcrumbs>
+    </div>
   );
 }

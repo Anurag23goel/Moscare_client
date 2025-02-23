@@ -5,7 +5,7 @@ function ContactTypesPage() {
     return (
         <div>
             {/*<DashMenu />*/}
-
+            
             <ContactType/>
         </div>
     )

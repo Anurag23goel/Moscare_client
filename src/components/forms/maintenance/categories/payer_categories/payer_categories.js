@@ -17,7 +17,7 @@ function PayerCategory() {
     const [code, setCode] = useState("");
     const [description, setDescription] = useState("");
     const [form, setForm] = useState({})
-    const {loading} = useContext(ColorContext);
+    // const {loading} = useContext(ColorContext);
     const {addValidationMessage, validationMessages, handleCloseMessage} = useContext(ValidationContext);
 
     const [payerCategoryData, setPayerCategoryData] = useState([]);
