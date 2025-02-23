@@ -43,7 +43,7 @@ export function CustomBreadcrumbs() {
   };
 
   return (
-    <div role="presentation" onClick={handleClick}>
+    <div role="presentation">
       <Breadcrumbs aria-label="breadcrumb" separator="›">
         {/* Home Link */}
         <Link
@@ -74,7 +74,7 @@ export function CustomBreadcrumbs() {
               key={path}
               underline="hover"
               color="inherit"
-              href={path}
+              href={""}
               className="flex items-center gap-1"
             >
               {icon} {label}
