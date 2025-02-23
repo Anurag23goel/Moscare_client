@@ -1,0 +1,33 @@
+/* Define the styling for the fontFamily */
+.fontFamily {
+    font-family: "Metropolis", sans-serif !important;
+}
+
+.columnChooserButton {
+    /* Add your desired styles here */
+    /* Example styles */
+    border: 1px solid #ccc;
+    padding: 0px 10px;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+
+.action-cell {
+    border: "none";
+}
+
+.endicon {
+    font-size: 12px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    margin-left: -5px !important;
+}
+
+.agGridEditButton {
+    border: none !important;
+    font-weight: 500 !important;
+    color: rgba(0, 102, 204, 1);
+    font-size: 12px !important;
+    line-height: normal !important;
+}

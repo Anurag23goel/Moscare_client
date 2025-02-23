@@ -1,0 +1,910 @@
+/* Add to globals.css */
+.menu-item-container {
+    position: relative;
+}
+
+.menu-item-container .submenu {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.2s ease-in-out;
+}
+
+.menu-item-container:hover .submenu,
+.menu-item-container.active .submenu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+@font-face {
+    font-family: "Metropolis";
+    src: url("/fonts/Metropolis-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Metropolis";
+    src: url("/fonts/Metropolis-Bold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Metropolis";
+    src: url("/fonts/Metropolis-Black.otf") format("opentype");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Apply the font globally */
+body {
+    font-family: "Metropolis", sans-serif !important;
+    background-color: #f5f5f7 !important;
+}
+
+/* YourStyles.module.css */
+
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: "Metropolis", sans-serif !important; */
+}
+
+/* Scrollbar css  */
+
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+/* Handle part of the scrollbar */
+::-webkit-scrollbar-thumb {
+    background-color: rgb(180, 180, 180); /* Color of the scrollbar handle */
+    border-radius: 6px; /* Border radius of the handle */
+}
+
+/* Track (background) of the scrollbar */
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Color of the scrollbar track */
+}
+
+.fontFamilyMetro {
+    font-family: "Metropolis", sans-serif !important;
+}
+
+.css-md26zr-MuiInputBase-root-MuiOutlinedInput-root {
+    border-radius: 10px !important;
+}
+
+.css-10hburv-MuiTypography-root,
+.css-yb0lig {
+    font-size: 14px !important;
+    font-family: "Metropolis", sans-serif !important;
+    letter-spacing: 0.4px;
+}
+
+.prefixinput {
+    font-family: "Metropolis" !important;
+    background-color: rgb(225, 225, 225);
+    border-radius: 8px;
+}
+
+/* css for datatable vertical scroll  */
+.css-1b9e9gy {
+    width: 4px !important;
+}
+
+/* css for datatable horizontal scroll  */
+.css-1rtad1 {
+    height: 4px !important;
+}
+
+/* .css-n3fyjk-MuiDataGrid-root .MuiDataGrid-cell--textLeft {
+  padding: 10px !important;
+}
+
+.css-n3fyjk-MuiDataGrid-root .MuiDataGrid-row.MuiDataGrid-row--firstVisible,
+.css-n3fyjk-MuiDataGrid-root
+  .MuiDataGrid-virtualScrollerContent
+  .MuiDataGrid-row {
+  max-height: 45px !important;
+  min-height: 45px !important;
+  --height: 45px !important;
+} */
+
+.css-lfwcke-MuiTabs-flexContainer {
+    align-items: end !important;
+}
+
+/* menuStyles.module.css */
+.navDropdownMenu {
+    position: relative;
+}
+
+.navDropdownMenu .dropdown-menu {
+    position: absolute !important;
+    left: 100% !important;
+    top: 0 !important;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.css-rtrcn9-MuiTablePagination-root .MuiTablePagination-selectLabel {
+    margin: 0 !important;
+}
+
+.css-levciy-MuiTablePagination-displayedRows {
+    margin: 0 !important;
+}
+
+.navbar {
+    font-size: 13.4px !important;
+}
+
+.dropdown-menu {
+    font-size: 13.4px;
+}
+
+/* Client Calendar Button */
+/* Client Calendar Button */
+
+.fc-button {
+    border: none !important; /* Remove borders */
+    color: white !important; /* White text */
+    padding: 10px 14px !important; /* Medium padding */
+    text-align: center !important; /* Centered text */
+    text-decoration: none !important; /* Remove underline */
+    display: inline-block !important; /* Make the buttons appear in a line */
+    font-size: 12px !important; /* Medium font size */
+    margin: 4px 2px !important; /* Medium margin */
+    cursor: pointer !important; /* Pointer/hand icon */
+    border-radius: 6px !important; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    border-radius: 8px !important; /* Rounded corners */
+    font-weight: 500 !important;
+}
+
+.fc-button:hover {
+    transform: scale(1.05); /* Slightly larger on hover */
+}
+
+.fc-button:disabled {
+    background-color: #bdc3c7 !important; /* Light grey background for disabled state */
+    cursor: not-allowed !important; /* Not-allowed cursor for disabled state */
+}
+
+.fc-button-primary:disabled {
+    background-color: #bdc3c7 !important; /* Override for disabled state of primary buttons */
+}
+
+.fc-icon {
+    font-size: 16px !important; /* Medium icon size */
+}
+
+/* Legend */
+.legend {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+.legend-past {
+    background: linear-gradient(to right, #6c757d, #adb5bd);
+}
+
+.legend-current {
+    background: linear-gradient(to right, #ff8c00, #ffb84d);
+}
+
+.legend-future {
+    background: linear-gradient(to right, #20c997, #63e6be);
+}
+
+.css-y6rp3m-MuiButton-startIcon {
+    display: inherit;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.css-1a6eg8x-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
+    border-radius: 4px;
+}
+
+/* Removed underline from day number */
+.fc .fc-daygrid-day-number {
+    text-decoration: none;
+}
+
+/* Minimalist table container */
+.tableContainer {
+    padding: 24px;
+    background-color: #fafafa;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Clean and simple DataGrid */
+.dataGrid {
+    border: none;
+    font-family: "Metropolis", sans-serif !important;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Column headers with a subtle, elegant color */
+.MuiDataGrid-columnHeaders {
+    color: #000000;
+    border-bottom: 1px solid #ddd;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-family: "Metropolis", sans-serif !important;
+    font-size: 12px !important;
+}
+
+.header {
+    color: #000000;
+    letter-spacing: 0.5px;
+    text-transform: none;
+}
+
+.css-n3fyjk-MuiDataGrid-root .MuiDataGrid-container--top [role="row"] {
+    background-color: #f3f3f3 !important;
+}
+
+/* Rows with subtle striping and hover effect */
+.MuiDataGrid-row:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.MuiDataGrid-row:hover {
+    background-color: #e8f4fd !important;
+    transition: background-color 0.3s ease;
+}
+
+/* Cells with clean, spacious design */
+.MuiDataGrid-cell {
+    font-family: "Metropolis", sans-serif !important;
+    font-size: 12px !important;
+    padding: 12px;
+    color: #4a4a4a;
+    border-bottom: 1px solid #eee;
+}
+
+/* Footer with subtle, clean styling */
+.MuiDataGrid-footerContainer {
+    background-color: #fafafa;
+    font-size: 0.85rem;
+    color: #666;
+    border-top: 1px solid #ddd;
+    font-family: "Metropolis", sans-serif !important;
+    font-size: 12px !important;
+}
+
+.css-t89xny-MuiDataGrid-columnHeaderTitle {
+    font-family: "Metropolis", sans-serif !important;
+    font-size: 12px !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* Pagination controls - subtle and clean */
+.MuiTablePagination-actions .MuiIconButton-root {
+    color: #4a4a4a;
+}
+
+.MuiTablePagination-actions .MuiIconButton-root:hover {
+    color: #2563eb;
+}
+
+/* Minimal, elegant scrollbar */
+.MuiDataGrid-root .MuiDataGrid-virtualScroller::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    font-family: "Metropolis", sans-serif !important;
+    font-size: 12px !important;
+}
+
+.MuiDataGrid-root .MuiDataGrid-virtualScroller::-webkit-scrollbar-thumb {
+    background-color: #c1c1c1;
+    border-radius: 6px;
+}
+
+.MainContainer {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.dataGridWrapper {
+    height: 500px; /* Set fixed height for the table container */
+    width: 100%;
+    overflow: hidden; /* Prevents overflow */
+}
+
+.MuiDataGrid-root {
+    background-color: white;
+    font-family: "Metropolis", sans-serif !important;
+    font-size: 12px !important;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    height: 100%; /* Ensures that the table takes the full height of the wrapper */
+}
+
+/* -x-x--x-x-x-x-x-x-x-x--x-x-x-x-x-x-x-x-----x-xxxx---------x----------x */
+
+.columnChooserButton {
+    margin-bottom: 15px;
+}
+
+.MuiDialogContent-root {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Add a small line between each header cell using ::after */
+.ag-theme-material .ag-header-cell::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%; /* Adjust to center the line vertically */
+    transform: translateY(-50%);
+    height: 50%; /* Make the line smaller than the full header height */
+    width: 1px;
+    background-color: #ababab; /* Light gray line */
+}
+
+.ag-theme-material .ag-header-cell {
+    background-color: #e1e1e1;
+}
+
+.ag-ltr .ag-cell {
+    border-right-width: 1px;
+    color: #6e6e73 !important;
+}
+
+.ag-theme-material .ag-header-cell:hover {
+    background-color: #e1e1e1 !important;
+}
+
+/* Remove the right line from the last header cell */
+.ag-theme-material .ag-header-cell:last-child::after {
+    display: none;
+}
+
+.ag-theme-material .ag-header-cell {
+    border-top: 1px solid rgb(230, 230, 230);
+}
+
+.ag-theme-material .ag-row:nth-child(even) {
+    background-color: #f6f6f6; /* Lighter background for even rows */
+}
+
+/* In your CSS file or styles */
+.ag-theme-material .ag-row-hover {
+    background-color: transparent !important;
+}
+
+.ag-theme-material .ag-header {
+    background-color: #d3d3d3 !important;
+    color: #000 !important;
+}
+
+.ag-theme-material .ag-row {
+    transition: none !important;
+}
+
+.ag-body-horizontal-scroll {
+    height: 5px !important;
+    max-height: 5px !important;
+    min-height: 5px !important;
+}
+
+.ag-body-vertical-scroll {
+    min-width: 5px !important;
+    max-width: 5px !important;
+    width: 5px !important;
+}
+
+.react-datepicker__month-container,
+.react-datepicker__month {
+    z-index: 99 !important;
+    position: relative !important;
+}
+
+.ag-paging-panel {
+    height: 40px !important;
+}
+
+.fontSize12 {
+    font-size: 12px !important;
+}
+
+.fontSize13 {
+    font-size: 13px !important;
+    font-family: "Metropolis", sans-serif !important;
+}
+
+/* Navbar Dropdown Css */
+#basic-navbar-nav > div .dropdown > a:focus {
+    color: #8862f1;
+}
+
+#basic-navbar-nav > div .dropdown > .dropdown-menu.show {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    position: absolute !important;
+    top: 135% !important;
+    left: 50% !important;
+    transform: translateX(-50%);
+    text-align: left !important;
+  background-color: white;
+}
+
+#basic-navbar-nav > div .dropdown > .dropdown-menu > div {
+    width: 13vw;
+    /* text-align: center; */
+}
+
+.dropdown-menu > div:hover > a,
+.dropdown-menu > div:hover > div > a,
+.dropdown-menu > div > div > div > a:hover {
+    background-color: #8862f1;
+    color: #fff;
+    text-align: left;
+}
+
+.Mui-focused,
+.Mui-focused > fieldset,
+.Mui-checked,
+.MuiButton-outlinedPrimary {
+    color: #8862f1 !important;
+    border-color: #8862f1 !important;
+}
+
+.MuiInputBase-root {
+    padding: 0px 35px 0px 15px !important;
+    height: 38px !important;
+    font-family: "Metropolis";
+}
+
+.MuiInputBase-input {
+    padding: unset !important;
+}
+
+.modal-dialog {
+    width: 60%;
+    max-width: unset;
+}
+
+.modal-dialog {
+    width: 60%;
+    max-width: unset;
+}
+
+.react-datepicker-popper {
+  z-index: 99999 !important;
+  line-height: 0;
+}
+
+.ag-theme-material .ag-header-row {
+    font-weight: 500 !important;
+    font-size: 12px !important;
+    letter-spacing: 0.5px !important;
+}
+
+.ag-ltr .ag-cell {
+    font-size: 12px !important;
+    height: 55px !important;
+}
+
+.ag-row {
+    border-bottom: none !important;
+}
+
+.MuiButton-root,
+.MuiButtonBase-root {
+    text-transform: none !important;
+    font-family: "Metropolis" !important;
+}
+
+.css-1knaqv7-MuiButtonBase-root-MuiButton-root {
+    justify-content: start !important;
+    align-self: self-start !important;
+    align-items: start !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.endicon {
+    font-size: 12px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    margin-left: -5px !important;
+}
+
+.agGridEditButton {
+    display: flex !important;
+    align-items: end !important;
+    justify-content: end !important;
+    border: none !important;
+    font-weight: 500 !important;
+    color: rgba(0, 102, 204, 1);
+    font-size: 12px !important;
+    line-height: normal !important;
+}
+
+.ag-cell.ag-cell-first-right-pinned:not(.ag-cell-range-left):not(
+    .ag-cell-range-single-cell
+  ) {
+    align-items: center !important;
+    justify-content: center !important;
+    display: flex !important;
+}
+
+/* src/styles/validationBar.css */
+
+.validation-bar-container {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #f0f2f5; /* Light background for distinction */
+    position: relative;
+}
+
+.validation-bar-stack {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto; /* Center horizontally */
+}
+
+.css-1ftjo2h-MuiPaper-root-MuiPopover-paper {
+    background-color: transparent !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+}
+
+/* Validation bar css starts */
+
+.validation-bar-container {
+    width: 100%;
+    z-index: 9999;
+    padding: 0;
+    margin: 0;
+}
+
+.validation-bar {
+    width: 100%;
+}
+
+.validation-bar.error {
+    background-color: #ff4444; /* Custom error color */
+}
+
+.validation-bar.success {
+    background-color: #4caf50; /* Custom success color */
+}
+
+.validation-bar.warning {
+    background-color: #ff9800; /* Custom warning color */
+}
+
+.validation-bar.info {
+    background-color: #2196f3; /* Custom info color */
+}
+
+.MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon.css-ka7ti6-MuiAutocomplete-root
+.MuiOutlinedInput-root {
+    border-radius: 10px;
+    font-family: "Metropolis", sans-serif !important;
+    font-size: 14px !important;
+}
+
+.css-1jd6s73-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
+    font-size: 14px !important;
+}
+
+.css-y04a48-MuiFormControl-root {
+    min-width: 115px !important;
+}
+
+.css-jedpe8-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.MuiSelect-select {
+    font-family: "Metropolis" !important;
+    /* font-weight: 500 !important; */
+}
+
+.css-ahj2mt-MuiTypography-root,
+.css-1sn4lm3-MuiTypography-root {
+    font-family: "Metropolis" !important;
+    font-size: 12px !important;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #222; /* Text color */
+}
+
+/* Label Styling */
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+    font-family: "Metropolis" !important;
+    font-size: 12px;
+}
+
+/* Hide the default checkbox */
+.custom-checkbox {
+    display: none;
+}
+
+/* Custom checkbox style */
+.checkbox-label .checkmark {
+    height: 20px;
+    width: 20px;
+    background-color: #e1e1e1; /* Light grey background */
+    border-radius: 4px; /* Rounded edges */
+    margin-left: 10px;
+    position: relative;
+}
+
+/* Disabled style */
+.custom-checkbox:disabled + .checkmark {
+    background-color: #ddd; /* Disabled grey */
+}
+
+/* When the checkbox is checked, show a tick mark */
+.custom-checkbox:checked + .checkmark::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 7px;
+    width: 5px;
+    height: 10px;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.checkbox {
+    font-size: 12px !important;
+    font-family: "Metropolis" !important;
+    /* margin-top: 1.5rem; */
+    font-size: 0.9rem !important;
+}
+
+.css-1nmd4ol-MuiFormControl-root {
+    margin-right: 0px !important;
+    background-color: rgb(225, 225, 225);
+    border-radius: 8px;
+}
+
+.css-cyxlny-MuiPaper-root-MuiDialog-paper {
+    overflow: hidden !important;
+}
+
+.css-1ex1afd-MuiTableCell-root {
+    font-family: "Metropolis", "Helvetica", "Arial", sans-serif !important;
+}
+
+.css-ibgdc6-MuiTypography-root {
+    font-family: "Metropolis" !important;
+}
+
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+    font-family: "Metropolis" !important;
+}
+
+.css-bghv3y-MuiToggleButtonGroup-root .MuiToggleButtonGroup-lastButton,
+.css-bghv3y-MuiToggleButtonGroup-root .MuiToggleButtonGroup-middleButton {
+    border-left: -1px solid transparent;
+}
+
+.status-filter,
+.status-filter-search {
+    font-family: "Metropolis", sans-serif !important;
+    font-size: 12px !important;
+    color: #6b6b6b !important;
+    background-color: #d5d5d5 !important;
+    outline: none !important;
+    border: none !important;
+    border-radius: 12px !important;
+    margin: 0 !important;
+    height: 40px !important;
+    font-weight: 600 !important;
+}
+
+.status-filter-search {
+    width: 240px !important;
+}
+
+.css-dpjnhs-MuiInputBase-root-MuiOutlinedInput-root {
+    border-radius: 10px !important;
+}
+
+/* For the outer Tabs container */
+.tabsContainer {
+    width: 100%;
+    display: flex !important;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    border-top: 1px solid #000;
+}
+
+.tabsFlexContainer {
+    justify-content: flex-end;
+}
+
+.tabsIndicator {
+    display: none; /* Removes default Material-UI tab indicator */
+}
+
+/* For the individual Tab components */
+.tabItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1; /* Perfect vertical alignment */
+    text-align: center; /* Explicit horizontal alignment */
+    text-transform: none; /* Prevents uppercase transformation */
+    font-size: 14px; /* Consistent font size */
+    color: #fff !important; /* Default color for unselected tabs */
+    transition: all 0.2s ease-in-out;
+    padding: 0; /* Removes vertical padding */
+    line-height: 0 !important;
+    padding: 10px 20px !important;
+    width: auto !important;
+    min-width: auto !important;
+    max-width: auto !important;
+    height: 35px !important; /* Uniform height */
+    min-height: 35px !important;
+    margin-right: 10px !important;
+    margin-left: 10px !important;
+}
+
+.tabItemSelected {
+    color: #000 !important;
+    background-color: #fff !important;
+    border-radius: 25px !important;
+    transition: all 0.2s ease-in-out;
+    line-height: 0 !important;
+    padding: 10px 20px !important;
+    height: 35px !important; /* Uniform height */
+    min-height: 35px !important;
+    width: auto !important;
+    min-width: auto !important;
+    max-width: auto !important;
+    margin-right: 10px !important;
+    margin-left: 10px !important;
+}
+
+/* scheduler.module.css */
+
+.fc .fc-toolbar.fc-header-toolbar {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    border-radius: 12px !important;
+    font-family: "Metropolis" !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    color: #6b6b6b !important;
+}
+
+.notificationList {
+  width: 100%;
+  background: transparent !important;
+  padding: 10px;
+  max-height: 75vh !important; 
+  overflow-y: auto;
+  overflow-x: hidden;
+    background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px) !important;
+  border-radius: 8px !important;
+}
+
+.dropdown-menu {
+  border-radius: 12px !important;
+  background-color: rgba(255, 255, 255, 0.1) ;
+  backdrop-filter: blur(10px) ;
+}
+
+.glass-box {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    color: #ffffff;
+}
+
+.status-card {
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.status-card:hover {
+    transform: translateY(-5px);
+}
+
+.field-name {
+    font-weight: 500;
+}
+
+.filled .field-name {
+    color: #d4edda;
+}
+
+.incomplete .field-name {
+    color: #f8d7da;
+}
+
+.fc-daygrid-dot-event.fc-event-mirror,
+.fc-daygrid-dot-event:hover {
+    background: none !important;
+    align-items: center !important;
+    font-size: 10px !important;
+    font-family: "Metropolis", sans-serif !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    transition: 0.2s;
+    padding: 0 !important;
+    margin: 0 0px 5px 0px !important;
+}
+
+.fc-daygrid-dot-event {
+    padding: 0 !important;
+    margin: 0 3px 5px 3px !important;
+}
+
+.fc-direction-ltr .fc-daygrid-event.fc-event-end,
+.fc-direction-rtl .fc-daygrid-event.fc-event-start {
+    border-radius: 8px !important;
+}
+
+.fc-direction-ltr .fc-daygrid-event.fc-event-start,
+.fc-direction-rtl .fc-daygrid-event.fc-event-end {
+    border-radius: 8px !important;
+}
+
+.fc .fc-daygrid-event {
+    margin-top: 0px !important;
+}

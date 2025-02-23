@@ -1,0 +1,1411 @@
+/* Add to navbar.module.css */
+.filterTabs {
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 0;
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid #eee;
+}
+
+.tabButton {
+  padding: 8px 16px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-weight: 500;
+  color: #666;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.tabButton:hover {
+  color: var(--primary-color);
+}
+
+.activeTab {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.activeTab::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+/* Keep all existing other styles */
+/* Add filter tab styles */
+.filterTabs {
+  display: block;
+  /* justify-content: space-between; */
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, -1.9);
+  /* border-bottom: 1px solid #eee; */
+}
+
+.tabButton {
+  flex: 1;
+  padding: 8px 12px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-weight: 500;
+  color: #666;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.tabButton:hover {
+  color: var(--primary-color);
+}
+
+.activeTab {
+  color: var(--primary-color);
+}
+
+.activeTab::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+/* Existing styles remain the same */
+
+.headerNotificationIcon {
+  position: relative;
+  top: 5px;
+  right: 0px;
+  font-size: 1.1rem;
+  margin-right: 5px;
+  align-items: center;
+  display: flex;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.notificationDropdown {
+  background: rgba(255, 255, 255, 0.95) !important; /* Fallback */
+  background: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* .notificationItem { */
+  /* background: rgba(255, 255,0.9) !important; Fallback */
+  /* background: rgba(255, 255,0.6) !important;
+  background: transparent !important;
+} */
+/* navbar.module.css */
+/* Add these glassmorphism styles */
+.notificationDropdown {
+  /* background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(12px) saturate(180%); */
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15) !important;
+  overflow: hidden;
+}
+
+.notificationDropdown::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  z-index: -1;
+}
+
+.notificationHeader {
+  /* background: rgba(255, 255, 255, 0.4) !important;
+  backdrop-filter: blur(8px); */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+  position: sticky;
+  padding: 0px 10px;
+  /* background-color: #f8f9fa; */
+  border-bottom: 2px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.notificationItem {
+  /* background: rgba(255, 255,0.6) !important; */
+  transition: all 0.3s ease;
+  margin: 8px;
+  border-radius: 12px;
+  border: 2px solid rgba(150, 100, 255, 0.5);
+  /* background: transparent  rgba(255, 255,0.6) !important; */
+}
+
+.notificationItem:hover {
+  background: rgba(150, 100, 255, 0.5) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(150, 100, 255, 0.5);
+  background: transparent !important;
+}
+
+/* Notification List Scroll Fix */
+.notificationList {
+  width: 100%;
+  background: transparent !important;
+  padding: 10px;
+  max-height: 75vh !important; 
+  overflow-y: auto;
+  overflow-x: hidden;
+    background: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(10px);
+}
+
+.unreadNotification {
+  /* border-left: 4px solid var(--primary-color); */
+  /* background: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(10px); */
+}
+
+.notificationBackdrop {
+  display: block !important;
+  /* background: rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: blur(3px); */
+}
+
+/* Update existing styles */
+.notificationDropdown {
+  width: 400px;
+  max-height: 70vh;
+  margin-top: 8px;
+  padding: 0;
+  z-index: 1000;
+}
+
+.notificationHeaderContent {
+  padding: 12px 18px !important;
+}
+
+/* .notificationActions button {
+  background: rgba(255, 255, 255, 0.7) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: blur(4px);
+} */
+
+.markReadButton:hover {
+  background: rgba(76, 175, 80, 0.2) !important;
+}
+
+.deleteButton:hover {
+  background: rgba(255, 68, 68, 0.2) !important;
+}
+
+.emptyState {
+  background: rgba(255, 255, 255, 0.6) !important;
+  margin: 3px;
+  border-radius: 75px;
+}
+
+/* Ensure notification items have consistent height */
+.notificationItem {
+  min-height: 80px;
+  padding: 12px 20px !important;
+  background: transparent !important;
+}
+
+/* Time display styling */
+.notificationTime {
+  font-size: 0.75rem !important;
+  color: #666 !important;
+  margin-top: 4px !important;
+}
+
+/* navbar.module.css */
+/* Notification Icon Alignment */
+.notificationIconWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  height: 40px;
+}
+
+
+/* Notification Items */
+.notificationItem {
+  padding: 12px 20px !important;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  background: transparent !important;
+}
+
+.notificationContent {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 0px;
+  /* backdrop-filter: blur(10px); */
+}
+
+
+.notificationIndicator {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+}
+
+.notificationText {
+  flex: 1;
+  min-width: 0;
+}
+
+.notificationText h6 {
+  font-size: 14px !important;
+  margin: 0 0 4px !important;
+}
+
+.notificationText p {
+  font-size: 13px !important;
+  line-height: 1.4;
+  margin: 0 0 4px !important;
+}
+
+.notificationTime {
+  font-size: 12px !important;
+}
+
+.notificationActions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.markReadButton, .deleteButton {
+  font-size: 16px !important;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.markReadButton:hover {
+  background: #4CAF5020;
+}
+
+.deleteButton:hover {
+  background: #ff444420;
+}
+
+/* Divider Fix */
+.notificationDivider {
+  margin: 0 20px !important;
+  background-color: #eee !important;
+  height: 1px !important;
+}
+
+/* Dropdown Positioning */
+.notificationDropdown {
+  margin-top: 10px !important;
+  transform: translateX(-20px) !important;
+}
+
+/* Header Buttons */
+.headerButtons {
+  padding: 8px 16px;
+}
+
+.deleteAllButton {
+  padding: 6px 12px !important;
+}
+
+/* Keep all existing styles below */
+.navbarCustom {
+  background: white;
+  border-bottom: 2px solid #bababa;
+  padding: 10px 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* ... rest of your existing CSS ... */
+/* navbar.module.css */
+/* Notification Icon Alignment */
+.notificationIconWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  height: 40px;
+}
+
+.notificationIcon {
+  font-size: 18px;
+  vertical-align: middle;
+  position: relative;
+  top: 10px;
+  right: -4px ;
+}
+
+/* Notification Items */
+.notificationItem {
+  padding: 12px 20px !important;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  background: transparent !important;
+}
+
+.notificationIndicator {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+}
+
+.notificationText {
+  flex: 1;
+  min-width: 0;
+}
+
+.notificationText h6 {
+  font-size: 14px !important;
+  margin: 0 0 6px !important;
+}
+
+.notificationText p {
+  font-size: 13px !important;
+  line-height: 1.4;
+  margin: 0 0 4px !important;
+}
+
+.notificationTime {
+  font-size: 12px !important;
+}
+
+.notificationActions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.markReadButton, .deleteButton {
+  font-size: 16px !important;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.markReadButton:hover {
+  background: white;
+}
+
+.deleteButton:hover {
+  background: #ff444420;
+}
+
+/* Divider Fix */
+.notificationDivider {
+  margin: 0 20px !important;
+  background-color: #eee !important;
+  height: 1px !important;
+}
+
+/* Dropdown Positioning */
+.notificationDropdown {
+  margin-top: 10px !important;
+  transform: translateX(-20px) !important;
+}
+
+/* Header Buttons */
+.headerButtons {
+  padding: 0px 25px;
+}
+
+.deleteAllButton {
+  padding: 0px 12px !important;
+}
+
+/* Keep all existing styles below */
+.navbarCustom {
+  background: white;
+  border-bottom: 2px solid #bababa;
+  padding: 10px 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+}
+/* Add these styles */
+.navDropdownCustom .dropdown-toggle::after,
+.notificationDropdown .dropdown-toggle::after {
+  border: none !important;
+  content: "▼";
+  vertical-align: middle;
+  margin-left: 6px;
+  color: #2d3436; /* Use your primary color hex code */
+  font-size: 0.8em;
+  transition: transform 0.2s ease;
+}
+
+.navDropdownCustom.show .dropdown-toggle::after,
+.notificationDropdown.show .dropdown-toggle::after {
+  transform: rotate(180deg);
+}
+
+/* Keep all existing styles below */
+.navbarCustom {
+  background: white;
+  border-bottom: 2px solid #bababa;
+  padding: 10px 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* ... rest of your existing CSS ... */
+.readNotification {
+  background-color: #f8f8f8 !important;
+  position: relative;
+}
+
+.readNotification::after {
+  content: "";
+  position: absolute;
+  /* left: 5; */
+  top: 0;
+  height: 100%;
+  /* width: 3px; */
+  background-color: #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+/* .unreadNotification {
+  border-left: 4px solid var(--primary-color);
+  background-color: #fff !important;
+  backdrop-filter: blur(10px);
+} */
+
+.markReadButton {
+  color: #4CAF50 !important;
+  transition: all 0.2s ease;
+}
+
+.markReadButton:hover {
+  color: white !important;
+  transform: scale(1.1);
+}
+
+/* Keep all other existing styles below */
+
+.notificationDivider {
+  background-color: grey !important;
+  height: 1px !important;
+  margin: 1px 1px !important;
+}
+
+/* navbar.module.css */
+/* Add these new styles */
+.readNotification {
+  background-color: #f5f5f5 !important;
+}
+
+.navRightCustom .dropdown-toggle::after {
+  margin-left: 8px !important;
+  vertical-align: 0.2em !important;
+}
+
+/* Unified notification styles */
+.notificationHeaderContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 16px;
+}
+
+.notificationTitle {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.notificationCount {
+  position: relative;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.headerButtons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.deleteAllButton {
+  background: none;
+  border: none;
+  padding: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #666;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 1.2em;
+  color: purple;
+  line-height: 1;
+}
+
+.markReadButton,
+.deleteButton {
+  background: none;
+  border: none;
+  padding: 0 5px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #666;
+}
+
+.notificationBackdrop {
+  display: none;
+}
+
+.notificationItem {
+  padding: 16px;
+  transition: all 0.2s ease;
+  position: relative;
+  cursor: pointer;
+  background-color: white;
+  background: transparent !important;
+}
+
+.notificationItem:hover {
+  background-color: #f8f5ff;
+  transform: translateX(4px);
+  background: transparent !important;
+}
+
+
+/* .unreadNotification {
+  border-left: 4px solid var(--primary-color);
+} */
+
+.notificationText h6 {
+  font-size: 0.95rem;
+  margin: 0 0 8px 0;
+  font-weight: 600;
+  color: navy;
+}
+
+.notificationText p {
+  font-size: 0.9rem;
+  color: navy;
+  margin: 0 0 8px 0;
+}
+
+.notificationTime {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.notificationActions {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.notificationDropdown {
+  width: 400px;
+  max-height: 70vh;
+  border: 2px solid #e0e0e0 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12) !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  /* backdrop-filter: blur(10px);
+  z-index: 1000; */
+}
+
+.navbarCustom {
+  background: white;
+  border-bottom: 2px solid #bababa;
+  padding: 10px 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.navContainerCustom {
+  padding: 0;
+  max-width: 95vw;
+}
+
+.readNotification {
+  background-color: #f5f5f5 !important;
+}
+
+.navRightCustom .dropdown-toggle::after {
+  margin-left: 8px !important;
+  vertical-align: 0.2em !important;
+}
+
+/* Keep all existing styles below */
+.notificationHeaderContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.notificationTitle {
+  display: flex;
+  align-items: center;
+}
+
+.headerButtons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.deleteAllButton {
+  background: none;
+  border: none;
+  padding: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #666;
+  white-space: nowrap;
+}
+
+.deleteAllButton span {
+  font-size: 0.9em;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 1.2em;
+  color: #666;
+  line-height: 1;
+}
+
+/* ... (keep all other existing styles) ... */
+
+.notificationDropdown {
+  width: 400px;
+  max-height: 70vh;
+  border: 2px solid #e0e0e0 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12) !important;
+  margin-top: 8px;
+  padding: 0;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.95) !important;
+  /* backdrop-filter: blur(10px);
+  z-index: 1000; */
+}
+
+/* ... (rest of your existing CSS) ... */
+  .notificationHeaderContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .notificationTitle {
+    display: flex;
+    align-items: center;
+  }
+
+  /* .notificationCount {
+    font-size: 0.9em;
+    color: #666;
+    margin-left: 0px;
+  } */
+
+  .headerButtons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .deleteAllButton {
+    background: none;
+    border: none;
+    padding: 2px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #666;
+    white-space: nowrap;
+  }
+
+  .deleteAllButton span {
+    font-size: 0.9em;
+  }
+
+  .closeButton {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #666;
+    line-height: 1;
+  }
+  /* Add these styles to your existing navbar.module.css */
+
+  .notificationHeaderContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 104%;
+    padding: 0 10px;
+  }
+
+  .notificationTitle {
+    /* position: relative;
+    top: auto;
+    right: auto; */
+    display: flex;
+    align-items: baseline;
+    gap: 0px;
+  }
+
+  /* .notificationCount {
+    font-size: 0.9em;
+    color: #666;
+  } */
+
+  .headerButtons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .deleteAllButton {
+    background: none;
+    border: none;
+    padding: 2px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: #666;
+  }
+
+  .closeButton {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #666;
+    line-height: 1;
+  }
+
+  .markReadButton,
+  .deleteButton {
+    background: none;
+    border: none;
+    padding: 0 5px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #666;
+  }
+  /* Remove backdrop */
+  .notificationBackdrop {
+    display: none;
+  }
+
+  /* Header adjustments */
+  .notificationHeaderContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 16px;
+  }
+
+  .headerTitle {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  /* Button adjustments */
+  .headerButtons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .clearButton, .closeButton {
+    border: none !important;
+    background: none;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Notification text sizing */
+  .notificationText h6 {
+    font-size: 10px;
+    margin-bottom: 1px;
+  }
+
+  .notificationBody {
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+
+  .notificationTime {
+    font-size: 11px;
+    color: #666;
+  }
+
+  /* Notification item spacing */
+  .notificationItem {
+    padding: 8px 16px;
+    background: transparent !important;
+  }
+
+  .notificationDivider {
+    height: 1px;
+    background: #eee;
+    margin: 4px 0;
+  }
+
+  /* Action buttons */
+  .notificationActions {
+    display: flex;
+    gap: 4px;
+  }
+
+  .markReadButton, .deleteButton {
+    border: none;
+    background: none;
+    padding: 2px 4px;
+    font-size: 12px;
+    color: #666;
+  }
+  /* Add divider styles */
+  .notificationDivider {
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 12px 24px;
+  }
+
+  /* Remove last divider */
+  .notificationList > :last-child .notificationDivider {
+    display: none;
+  }
+
+  /* Existing notification styles */
+  .notificationIconWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    height: 1px;
+  }
+
+  .notificationBadge {
+    position: absolute;
+    top: -3px;
+    right: 12.5px;
+    background-color: #ff4757;
+    color: white;
+    border-radius: 50%;
+    padding: 1px 3px;
+    font-size: 0.75rem;
+    min-width: 17px;
+    text-align: center;
+    line-height: normal;
+    border: 2px solid white;
+    z-index: 1;
+  }
+
+  /* .notificationCount {
+    width: 10%;
+    background: lightgrey;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: 600;
+    min-width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0px 4px rgba(0,0,0,0.2);
+    line-height: 1;
+    
+  } */
+
+  /* Fix dropdown alignment */
+  .navRightCustom .dropdown-toggle::after {
+    vertical-align: 0.2em;
+  }
+
+  .navRightCustom .nav-link {
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }  
+
+  /* Date Formatting Fix */
+  .notificationTime {
+    display: block;
+    margin-top: 8px;
+    color: #666;
+    font-size: 0.75rem;
+  }
+
+  /* Error Handling for Invalid Dates */
+  .notificationTime.invalid {
+    color: #ff4444;
+    font-style: italic;
+  }
+  /* Notification Item Styling */
+  .notificationItem {
+    padding: 16px;
+    transition: all 0.2s ease;
+    position: relative;
+    cursor: pointer;
+    background-color: white;
+    background: transparent !important;
+  }
+
+  .notificationItem:hover {
+    background-color: #f8f5ff;
+    transform: translateX(4px);
+    background: transparent !important;
+  }
+
+  /* .unreadNotification {
+    border-left: 4px solid var(--primary-color);
+    backdrop-filter: blur(10px);
+  } */
+
+  /* Mark Read Button States */
+  .markReadButton {
+    background: none;
+    color: #4CAF50;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: all 0.2s;
+    font-weight: 600;
+  }
+
+  .markReadButton:hover:not(.read) {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  /* Delete Button Styling */
+  .deleteButton {
+    background: none;
+    color: #ff4444;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: all 0.2s;
+    font-weight: 600;
+  }
+
+  .deleteButton:hover {
+    background-color: #ff4444;
+    color: white;
+  }
+
+  /* Notification Indicator */
+  .notificationIndicator {
+    width: 8px;
+    height: 8px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    margin-top: 8px;
+    flex-shrink: 0;
+    opacity: 1;
+    transition: opacity 0.2s;
+  }
+
+  .notificationItem.read .notificationIndicator {
+    opacity: 0;
+    background: transparent !important;
+  }
+  /* Notification Item Styling */
+  .notificationItem {
+    padding: 16px;
+    transition: all 0.2s ease;
+    position: relative;
+    cursor: pointer;
+    background-color: white;
+    background: transparent !important;
+  }
+
+  .notificationItem:hover {
+    background-color: #f8f5ff;
+    transform: translateX(4px);
+    background: transparent !important;
+  }
+
+  .unreadNotification {
+    /* border-left: 4px solid var(--primary-color); */
+    background: transparent !important;
+  }
+
+  /* Remove existing background color for unread notifications */
+  /* .unreadNotification {
+    background-color: white !important;
+    backdrop-filter: blur(10px);
+  } */
+
+  /* Ensure all notifications start with white background */
+  /* .notificationList > div {
+    background-color: white;
+    backdrop-filter: blur(30px);
+  } */
+
+  .notificationText {
+    flex: 1;
+    min-width: 0;
+    word-wrap: break-word;
+  }
+
+  .notificationText p {
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+
+  .notificationActions {
+    flex-shrink: 0;
+    margin-left: auto;
+  }
+
+  /* Notification Dropdown Width Fix */
+  .notificationDropdown {
+    width: 400px;
+    max-width: 95vw;
+  }
+
+  /* Horizontal Scroll Fix */
+  .notificationItem {
+    width: 98%;
+    box-sizing: border-box;
+    background: transparent !important;
+  }
+
+  .notificationBackdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* backdrop-filter: blur(3px); */
+    z-index: 999;
+  }
+
+  .notificationDropdown {
+    width: 400px;
+    max-height: 70vh;
+    border: 2px solid #e0e0e0 !important;
+    border-radius: 12px !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12) !important;
+    margin-top: 8px;
+    padding: 0;
+    overflow: hidden;
+    /* background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px);
+    z-index: 1000; */
+  }
+
+  .notificationContainer {
+    position: relative;
+    z-index: 1001;
+  }
+
+  /* Close Button Styles */
+  .closeButton {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    font-size: 1.5rem;
+    line-height: 1;
+    padding: 0 8px;
+    transition: all 0.2s;
+    margin-left: 10px;
+  }
+
+  .closeButton:hover {
+    color: #ff4444;
+    transform: scale(1.1);
+  }
+
+  .headerButtons {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+  }
+
+  .notificationHeaderContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+  }
+
+  .deleteAllButton {
+    background: none;
+    border: none;
+    color: #ff4444;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.2s;
+    font-weight: 500;
+  }
+
+  .deleteAllButton:hover {
+    background-color: rgba(255, 68, 68, 0.1);
+  }
+
+  .deleteAllButton svg {
+    font-size: 1.2rem;
+  }
+
+  .notificationItem {
+    padding: 16px;
+    transition: all 0.2s ease;
+    position: relative;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.1);
+    /* background: transparent !important; */
+  }
+
+  .notificationItem:hover {
+    background-color: #f8f5ff;
+    transform: translateX(4px);
+    background: transparent !important;
+  }
+
+  /* .unreadNotification {
+    background-color: #f8f5ff;
+    border-left: 4px solid var(--primary-color);
+    backdrop-filter: blur(10px);
+  } */
+
+  .notificationIndicator {
+    width: 8px;
+    height: 8px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    margin-top: 8px;
+    flex-shrink: 0;
+  }
+
+  .notificationText {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .notificationText h6 {
+    margin: 0 0 8px 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: navy;
+  }
+
+  .notificationText p {
+    margin: 0 0 8px 0;
+    color: black;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .notificationTime {
+    color: #999;
+    font-size: 0.8rem;
+    display: block;
+    margin-top: 4px;
+  }
+
+  .notificationActions {
+    display: flex;
+    gap: 8px;
+    margin-left: auto;
+    padding-left: 12px;
+  }
+
+  .markReadButton:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .deleteButton:hover {
+    background-color: #ff4444;
+    color: white;
+  }
+
+  .notificationDivider {
+    height: 1px;
+    background-color: #eee;
+    margin: 0 16px;
+  }
+
+  .emptyState {
+    width: 100%;
+    text-align: center;
+    padding: 40px;
+  }
+
+  .emptyState p {
+    color: #999;
+    margin: 8px 0 0 0;
+    font-size: 0.9rem;
+  }
+
+  /* Existing navbar styles */
+  .navbarCustom {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .navContainerCustom {
+    padding: 0 1rem;
+  }
+
+  .iconCustom {
+    font-size: 1.5rem;
+    color: #666;
+    transition: all 0.2s;
+  }
+
+  .iconCustom:hover {
+    color: var(--primary-color);
+  }
+
+  .companyLogo {
+    max-height: 40px;
+    margin-right: 10px;
+  }
+  .navbarCustom {
+    background: white;
+    border-bottom: 2px solid #bababa;
+    /* border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 18px;
+      border-bottom-right-radius: 18px; */
+    padding: 10px 20px;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+  }
+
+  .navContainerCustom {
+    padding: 0px;
+    width: 100%;
+    max-width: 95vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navMenuCustom {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  .navMenuCustom a {
+    padding: 6px !important;
+    font-size: 12px;
+  }
+
+  .navMenuCustom > a,
+  .navMenuCustom > div > a {
+    padding: 0px !important;
+  }
+
+  .navRightCustom {
+    display: flex;
+    align-items: center;
+  }
+
+  .navLinkCustom {
+    color: #707070;
+    display: flex;
+    align-items: center;
+    margin-right: 0;
+    padding: 0;
+  }
+
+  .iconCustom {
+    font-size: 18px !important;
+    color: #707070;
+    align-items: center;
+  }
+
+  .iconCustom1 {
+    font-size: 18px !important;
+    color: #707070;
+    align-items: center;
+    margin-right: 5px;
+  }
+
+  .navTextCustom {
+    font-size: 12px;
+    font-weight: 500;
+    color: #000000;
+  }
+
+  .navDropdownCustom_navRightCustom {
+    color: #000000;
+  }
+
+  .navDropdownItemCustom {
+    font-size: 12px;
+  }
+
+  .navDropdownItemCustom:hover,
+  .navDropdownItemCustom:focus {
+    color: #000000;
+    background-color: aliceblue;
+  }
+
+  .navLogoutCustom {
+    color: var(--danger-color);
+  }
+  .companyLogo {
+    width: 100px;
+    /* height: 60px; */
+    object-fit: contain; /* Ensures the logo doesn't distort */
+  }
+
+  .testingUi {
+    background-color: orange;
+  }

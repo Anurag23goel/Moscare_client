@@ -1,0 +1,119 @@
+/* src/styles/shiftRequest.module.css */
+
+.customModal .modal-content {
+    border-radius: 12px;
+    overflow: hidden;
+    font-family: 'Metropolis', sans-serif; /* Apply Metropolis font */
+}
+
+.customModal .modal-body {
+    padding: 2rem;
+}
+
+/* Existing styles */
+.TimesheetButtonDate {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    font-family: 'Metropolis', sans-serif; /* Apply Metropolis font */
+    font-size: 12px; /* Ensure font size is 12px */
+}
+
+.countBadge {
+    background-color: #ff5722;
+    color: white;
+    border-radius: 12px;
+    padding: 2px 8px;
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+}
+
+/* Additional styles for enhanced modal */
+.shiftInfoBox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 1rem;
+}
+
+.shiftDetail {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.statusText {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.descriptionSection {
+    margin-bottom: 1rem;
+}
+
+.actionButtons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+/* New styles for modal labels and inputs */
+.modalLabel {
+    font-size: 12px;
+    font-family: 'Metropolis', sans-serif;
+    margin-bottom: 4px;
+}
+
+.modalInput .MuiInputBase-input {
+    font-size: 12px;
+    font-family: 'Metropolis', sans-serif;
+}
+
+/* Styles for action buttons */
+.approveButton,
+.rejectButton,
+.makeShiftButton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    border-radius: 8px;
+    font-family: 'Metropolis', sans-serif; /* Apply Metropolis font */
+    font-size: 12px;
+    border: none; /* Remove default border */
+    cursor: pointer;
+}
+
+/* Approve Button */
+.approveButton {
+    background-color: #28a745; /* Green */
+    color: white;
+}
+
+.approveButton:hover {
+    background-color: #218838; /* Darker Green */
+}
+
+/* Reject Button */
+.rejectButton {
+    background-color: #dc3545; /* Red */
+    color: white;
+}
+
+.rejectButton:hover {
+    background-color: #c82333; /* Darker Red */
+}
+
+/* Make Shift Button */
+.makeShiftButton {
+    background-color: #007bff; /* Blue */
+    color: white;
+}
+
+.makeShiftButton:hover {
+    background-color: #0069d9; /* Darker Blue */
+}

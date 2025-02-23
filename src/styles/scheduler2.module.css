@@ -1,0 +1,43 @@
+/* Add/update these styles in your scheduler.module.css */
+.schedulerContainer {
+  --days-in-view: 7;
+  width: 100%;
+  height: calc(100vh - 200px);
+  overflow: auto;
+  /* background: white;
+  border-radius: 1rem;
+  border: 1px solid rgba(229, 231, 235, 0.5); */
+}
+
+.schedulerContent {
+  display: grid;
+  grid-template-columns: 200px repeat(var(--days-in-view), minmax(200px, 1fr));
+  min-width: min-content;
+}
+
+.schedulerHeader {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: 200px repeat(var(--days-in-view), minmax(200px, 1fr));
+  background: white;
+  /* border-bottom: 1px solid rgba(229, 231, 235, 0.5); */
+}
+
+.schedulerRow {
+  display: grid;
+  grid-template-columns: 200px repeat(var(--days-in-view), minmax(200px, 1fr));
+  min-height: 60px;
+  border-bottom: 1px solid rgba(229, 231, 235, 0.5);
+}
+
+/* Update the compact view styles */
+.compactView {
+  --days-in-view: 30;
+}
+
+.compactView .schedulerHeader,
+.compactView .schedulerRow {
+  grid-template-columns: 200px repeat(var(--days-in-view), minmax(100px, 1fr));
+}

@@ -1,0 +1,55 @@
+.formGroup {
+    margin-bottom: 0px;
+}
+
+.select {
+    width: 100%;
+    border-radius: 10px;
+    background-color: white;
+    height: 40px;
+}
+
+.textField {
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    height: 40px;
+    resize: vertical;
+}
+
+.textFieldNoResize {
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    height: 40px;
+    resize: none;
+}
+
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+    border: 0;
+    box-sizing: content-box;
+    background: none;
+    height: 0.4375em !important;
+    margin: 0;
+    -webkit-tap-highlight-color: transparent;
+    display: block !important;
+    min-width: 0;
+    width: 100% !important;
+    -webkit-animation-name: mui-auto-fill-cancel;
+    animation-name: mui-auto-fill-cancel;
+    -webkit-animation-duration: 10ms;
+    animation-duration: 10ms;
+    padding: 16.5px 14px !important;
+}
+
+.css-md26zr-MuiInputBase-root-MuiOutlinedInput-root {
+    border-radius: 10px !important;
+}
+
+.css-10hburv-MuiTypography-root {
+    font-size: 14px !important;
+}
+
+.profileTypography {
+    font-size: 14px !important;
+}

@@ -1,0 +1,20 @@
+.grpBtn {
+    margin-top: 1rem;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.statusInput {
+    width: 200px;
+    height: 40px !important;
+}
+
+.addWorkerBtn {
+    color: #fff !important;
+    border: none;
+    outline: none;
+    width: 10% !important;
+    height: 13%;
+}

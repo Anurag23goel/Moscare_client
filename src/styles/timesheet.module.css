@@ -1,0 +1,73 @@
+.modalContainer {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    max-width: 700px; /* Reduced width */
+    width: 90%;
+    margin: auto;
+    margin-top: 5%; /* Reduced margin to show button */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 20px; /* Space between options and calendar */
+    align-items: flex-start;
+}
+
+.modalTitle {
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.divider {
+    margin-top: 10px;
+}
+
+.leftOptions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px; /* Space between options */
+    padding: 10px 20px;
+}
+
+.weekOption {
+    cursor: pointer;
+    color: #3f51b5;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.weekOption:hover {
+    color: #2c3e50;
+}
+
+.verticalDivider {
+    height: 100%;
+    margin-left: 20px;
+}
+
+.calendarContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Space between calendar and apply button */
+    width: 100%;
+}
+
+.datePicker {
+    max-width: 400px; /* Adjust calendar width */
+}
+
+.selectedRangeDisplay {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.applyButton {
+    width: 100%; /* Full width button */
+    padding: 10px 0;
+    margin-top: 10px; /* Adjusted spacing */
+}
+  

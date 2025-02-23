@@ -1,0 +1,2002 @@
+/* Pending for approval approve and reject dialog design css start*/
+.customConfirmDialog {
+    border-radius: 8px;
+    padding: 16px;
+}
+
+
+.customConfirmDialogTitle {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.confirmIcon {
+    margin-right: 8px;
+    font-size: 2rem;
+    color: #4caf50; /* Green for approve */
+}
+
+.rejectIcon {
+    color: #f44336; /* Red for reject */
+}
+
+.customConfirmDialogContent {
+    font-size: 1rem;
+    color: #555;
+}
+
+.customConfirmDialogActions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.customConfirmDialogActions .MuiButton-root {
+    min-width: 80px;
+    font-size: 0.875rem;
+}
+
+.customConfirmDialogActions .MuiButton-containedPrimary {
+    background-color: #4caf50;
+}
+
+.customConfirmDialogActions .MuiButton-containedSecondary {
+    background-color: #f44336;
+}
+
+/* END */
+
+/* worker shift cell +n button design start */
+.moreShiftsIndicator {
+    text-align: center;
+    font-size: 10px; /* Small font size */
+    font-weight: 500;
+    color: #007bff; /* Blue text color */
+    cursor: pointer; /* Show pointer cursor */
+    text-decoration: underline; /* Underline text on hover */
+}
+
+.moreShiftsIndicator:hover {
+    text-decoration: underline; /* Underline text on hover */
+}
+
+/* End */
+
+.menuPaper {
+    border: 1px solid #007bff;
+    background-color: rgba(0, 123, 255, 0.1);
+    color: #007bff;
+    min-width: 150px;
+}
+
+.menuItem {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+}
+
+.menuItem:hover {
+    background-color: rgba(0, 123, 255, 0.2);
+}
+
+.menuIcon {
+    font-size: 16px;
+    margin-right: 8px;
+}
+
+.controlContainer {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.controlToggleIcon,
+.controlButtonIcon {
+    display: flex;
+    align-items: center;
+}
+
+.buttonIconSmall {
+    font-size: 14px; /* Smaller icon size */
+}
+
+.toggleButtonCustom {
+    font-size: 10px !important;
+    font-weight: 500 !important;
+    padding: 0px 10px !important;
+    text-transform: capitalize !important;
+}
+
+/* Base Styles for Custom Buttons */
+.refreshButtonCustom,
+.copyButtonCustom,
+.saveButtonCustom,
+.publishButtonCustom {
+    font-size: 10px !important; /* Increased for better readability */
+    font-weight: 500 !important;
+    padding: 6px 8px !important; /* Adjusted padding for better spacing */
+    border-radius: 30px !important;
+    text-transform: capitalize;
+    color: #fff !important;
+    border: 1px solid #fff !important; /* Slightly thicker border */
+    background-color: transparent !important; /* Transparent background by default */
+    cursor: pointer !important;
+    transition: all 0.3s ease !important; /* Smooth transition for hover effects */
+    display: inline-block; /* Ensure buttons align properly */
+    margin: 5px; /* Space between buttons */
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.15) !important; /* Add shadow for depth */
+}
+
+/* Hover Effects */
+.refreshButtonCustom:hover,
+.copyButtonCustom:hover,
+.saveButtonCustom:hover,
+.publishButtonCustom:hover {
+    background-color: rgba(
+            255,
+            255,
+            255,
+            0.1
+    ) !important; /* Subtle background on hover */
+    color: #fff !important; /* Maintain white text */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important; /* Add shadow for depth */
+}
+
+/* Optional: Active/Pressed State */
+.refreshButtonCustom:active,
+.copyButtonCustom:active,
+.saveButtonCustom:active,
+.publishButtonCustom:active {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Optional: Focus State for Accessibility */
+.refreshButtonCustom:focus,
+.copyButtonCustom:focus,
+.saveButtonCustom:focus,
+.publishButtonCustom:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5) !important;
+}
+
+.toggleButtonCustom:hover {
+    background-color: #fff !important;
+    color: black !important;
+}
+
+.toggleButtonGroup {
+    border: 1px solid #4a90e2 !important; /* Light blue border */
+}
+
+.toggleButtonGroupCustom {
+    border: none; /* No border for the group */
+    color: white;
+}
+
+.toggleButtonCustomDay,
+.toggleButtonCustom,
+.toggleButtonCustomWeek,
+.toggleButtonCustom {
+    border-radius: 30px !important;
+    font-weight: 500 !important;
+    font-size: 10px !important;
+    color: white;
+    margin-left: 6px !important;
+    margin-right: 6px !important;
+    border-left: 1px solid #fff !important;
+    padding: 6px 8px !important;
+}
+
+/* END */
+
+/* General table styling */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0px;
+}
+
+.tableHeader {
+    background-color: #f5f5f5;
+    font-weight: bold;
+    padding: 10px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.tableCell {
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 14px;
+}
+
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tableCell:hover .ellipsis {
+    overflow: visible;
+    white-space: normal;
+    text-overflow: clip;
+}
+
+/* Checkbox styling */
+.checkbox {
+    color: #1976d2;
+}
+
+/* Hover effect on table rows */
+.tableRow:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+/* Tooltip styling */
+.tooltip {
+    font-size: 12px;
+    color: #555;
+}
+
+/* Button group in table headers */
+.buttonGroup {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+/* Button styling */
+.minimalButton {
+    background-color: #1976d2;
+    color: white;
+    font-size: 12px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.minimalButton.secondary {
+    background-color: #d32f2f;
+}
+
+/* Shift timing */
+.minimalShiftPast {
+    color: gray;
+}
+
+.minimalShiftPresent {
+    color: #388e3c;
+    font-weight: bold;
+}
+
+.minimalShiftFuture {
+    color: #0288d1;
+}
+
+/* Dialog styling */
+.minimalDialog {
+    padding: 20px;
+}
+
+.minimalDialogTitle {
+    display: flex;
+    font-size: 18px;
+    font-weight: bold;
+    justify-content: space-between;
+}
+
+.minimalDialogContent {
+    padding: 10px;
+}
+
+/* Calendar event content */
+.fcEventContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fcEventTitle {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.fcEventTime {
+    font-size: 10px;
+}
+
+/* Past, Present, and Future Shifts */
+.minimalShiftPast {
+    color: #757575;
+    font-size: 12px;
+    border-radius: 3px;
+    padding: 3px 6px;
+}
+
+.minimalShiftPresent {
+    background-color: #d1e7dd;
+    color: #0f5132;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 3px;
+    padding: 3px 6px;
+}
+
+.minimalShiftFuture {
+    background-color: #dbe9f3;
+    color: #084298;
+    font-size: 12px;
+    border-radius: 3px;
+    padding: 3px 6px;
+}
+
+/* Calendar styling */
+.minimalCalendar {
+    font-size: 12px;
+}
+
+.fcEventTitle {
+    font-weight: 600;
+    font-size: 10px;
+}
+
+/* Dialog styling */
+.minimalDialog {
+    padding: 20px;
+}
+
+.minimalDialogTitle {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.minimalDialogContent {
+    padding: 10px;
+}
+
+.minimalDialogActions {
+    justify-content: end;
+    padding: 10px 24px;
+}
+
+/* Popover styling */
+.popoverContent {
+    padding: 15px;
+    max-width: 300px;
+}
+
+/* previewModal.module.css */
+
+/* .modalContent {
+  background: #fff;
+  padding: 20px;
+  max-width: 500px;
+  margin: 100px auto;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+} */
+
+.shiftChangesContainer {
+    max-height: 400px;
+    /* overflow-y: auto; */
+    margin-bottom: 20px;
+}
+
+.shiftChangeRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.button {
+    font-size: 14px;
+    padding: 8px 16px; /* Uniform padding for all buttons */
+    border-radius: 8px;
+}
+
+.beforeAfter {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.arrow {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    font-size: 20px;
+    color: #888;
+}
+
+.modalActions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.emptyCell {
+    height: 50px; /* Adjust based on your cell height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    background-color: #f5f5f5; /* Optional background color for visibility */
+    border: 1px solid #ccc;
+}
+
+.viewSelect {
+    width: 150px;
+    margin-bottom: 0px;
+    font-size: 14px;
+    /* height: 27px; */
+}
+
+.reactSelect__control {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 14px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    box-shadow: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.reactSelect__control:hover {
+    border-color: #ccc;
+}
+
+.reactSelect__control--is-focused {
+    border-color: #007bff;
+    box-shadow: 0 0 0 1px #007bff;
+}
+
+.reactSelect__value-container {
+    padding: 0 8px;
+}
+
+.reactSelect__single-value {
+    font-size: 14px;
+}
+
+.reactSelect__menu {
+    font-size: 14px;
+    z-index: 1000;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reactSelect__option {
+    padding: 10px;
+    transition: background-color 0.2s ease;
+}
+
+.reactSelect__option--is-focused {
+    background-color: #f8f9fa;
+}
+
+.reactSelect__option--is-selected {
+    background-color: #007bff;
+    color: white;
+}
+
+.reactSelect__indicator-separator {
+    display: none;
+}
+
+.reactSelect__dropdown-indicator {
+    padding: 0 8px;
+    color: #888;
+    transition: color 0.2s ease;
+}
+
+.reactSelect__dropdown-indicator:hover {
+    color: #007bff;
+}
+
+.schedulerControls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.schedulerControlsCol {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.controlIcon,
+.controlButton {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between icons and labels inside buttons */
+}
+
+.tabs {
+    display: flex;
+    justify-content: end;
+    padding: 20px 15px;
+}
+
+.tabsShiftCreate {
+    display: flex;
+    justify-content: center;
+    padding: 20px 15px;
+}
+
+/* .schedulerTab {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #ebebeb;
+  padding: 10px 0;
+  background-color: #fff;
+} */
+
+.SchedulerTab_button {
+    cursor: pointer;
+    font-size: 12px;
+    padding: 8px 15px;
+    transition: color 0.3s, border-bottom 0.3s;
+    font-weight: 400;
+    border: 1px solid #ebebeb;
+    border-radius: 8px;
+}
+
+.SchedulerTab_button:hover {
+    color: #000;
+}
+
+.SchedulerTab_button.active {
+    color: #000;
+}
+
+.WorkerShiftsTab_button {
+    cursor: pointer;
+    font-size: 12px;
+    padding: 8px 15px;
+    transition: color 0.3s, border-bottom 0.3s;
+    font-weight: 400;
+    border: 1px solid #ebebeb;
+    border-radius: 8px;
+    margin-left: 15px;
+}
+
+.WorkerShiftsTab_button.active {
+    color: #000;
+}
+
+.WorkerShiftsTab_button:hover {
+    color: #000;
+}
+
+.RosterTab_button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px 18px;
+    margin: 0;
+    color: #000000 !important;
+    transition: color 0.3s, border-bottom 0.3s;
+    font-weight: 500;
+}
+
+.RosterTab_button.active::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 2px;
+    background-color: #000000;
+    transition: width 0.3s;
+    margin: 5px auto 0; /* Adjust margin to position the line correctly */
+}
+
+.RosterTab_button:hover {
+    color: #000;
+}
+
+.RosterTab_button.active {
+    color: #007bff;
+}
+
+.loaderContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+.schedulerHeader {
+    display: flex;
+    background-color: #fff;
+  /* border-bottom: 1px solid #b1b1b1; */
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.schedulerHeaderCell {
+    width: 170px;
+    font-weight: 700;
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #000;
+    margin: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.schedulerDateCell {
+    height: 60px;
+    font-weight: 700;
+    border: none;
+    cursor: default;
+}
+
+.card {
+    border-radius: 0px;
+}
+
+.schedulerCell {
+    width: 175px;
+    height: 130px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: #333;
+    padding: 4px 0px 0px 0px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.schedulerCell:nth-child(2n) {
+    border-left: 1px solid #ebebeb;
+    border-right: 1px solid #ebebeb;
+}
+
+.schedulerCellAvailability {
+    width: 172px;
+    height: 80px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-sizing: border-box;
+    font-size: 12px;
+    color: #333;
+    margin: 0px 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    cursor: default;
+}
+
+.schedulerCellShift {
+    height: 150px;
+}
+
+.schedulerCellUnallocated {
+    border: 1px solid lightgrey;
+    background-color: transparent;
+}
+
+.schedulerHeaderShift,
+.schedulerHeaderCellShift {
+    display: flex;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.schedulerRowAvailability {
+    display: flex;
+    align-items: stretch;
+}
+
+.schedulerRowShifts {
+    display: flex;
+    align-items: stretch;
+    border-bottom: 1px solid #e2e2e2; /* Border-bottom for shifts */
+}
+
+.schedulerRowAvailability {
+    margin-bottom: 8px;
+}
+
+.workerItem {
+    width: 190px;
+    transition: background-color 0.3s;
+    font-size: 12px;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    border-radius: 4px; /* Optional for rounded corners */
+}
+
+/* Optional: Style for worker names */
+.workerItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.shiftHours {
+    font-weight: 500;
+    color: #000;
+    font-size: 13px;
+}
+
+.schedulerContent {
+    display: flex;
+    overflow-x: auto;
+}
+
+.schedulerColumn {
+    flex: 1;
+}
+
+.workerItem {
+    width: 180px;
+    text-align: center;
+    padding: 5px 5px 0px 5px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 700;
+    justify-content: center;
+}
+
+.availabilityText {
+    font-size: 12px;
+    font-weight: 600;
+    align-items: center;
+}
+
+.shiftStrip {
+    width: 155px;
+    height: 48px;
+    border-radius: 8px;
+    padding: 4px 4px 4px 4px;
+    cursor: pointer;
+    text-align: center;
+    word-wrap: break-word;
+    position: relative;
+    background-color: inherit;
+    color: inherit;
+    transition: background-color 0.3s, color 0.3s;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.CalendarShiftStrip {
+    align-items: center;
+    font-size: 10px !important;
+    position: relative;
+    font-family: "Metropolis", sans-serif !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 5px !important;
+    transform: none !important; /* Slightly larger on hover */
+    cursor: pointer !important;
+    border-radius: 8px !important;
+
+}
+
+.shiftPast {
+    background-color: #cdcdcd; /* Light Red for past shifts */
+    color: #808080; /* Text color same as line color */
+    cursor: default; /* No dragging for pending approval shifts */
+}
+
+.shiftPast::before {
+    background-color: #808080; /* Darker red for the left line */
+}
+
+.shiftPresent {
+    background-color: #d0e2fe; /* Light Green for present shifts */
+    color: #3081ec; /* Text color same as line color */
+}
+
+.shiftPresent::before {
+    background-color: #3081ec; /* Darker green for the left line */
+}
+
+.shiftNotStarted {
+    background-color: #d3bdf0 !important; /* Light Green for notStarted shifts */
+    color: #4b0082; /* Text color same as line color */
+}
+
+.shiftNotStarted:hover {
+    background-color: #d3bdf0; /* Light purple for notStarted shifts */
+    color: #4b0082; /* Text color same as line color */
+    transition: 0.3s;
+}
+
+.shiftNotStarted::before {
+    background-color: #4b0082; /* Darker green for the left line */
+}
+
+.shiftFuture {
+    background-color: #caf0d9; /* Light Blue for future shifts */
+    color: #17bf5f; /* Text color same as line color */
+}
+
+.shiftFuture::before {
+    background-color: #17bf5f; /* Darker blue for the left line */
+}
+
+.shiftPendingApproval {
+    background-color: #f48fbd66; /* Yellowish color to indicate pending approval */
+    cursor: default; /* No dragging for pending approval shifts */
+    color: #b35f8b;
+}
+
+.shiftPendingApproval::before {
+    background-color: #b35f8b; /* Darker blue for the left line */
+}
+
+.shiftPendingApproval:hover {
+    background-color: #fac3df; /* Lighter shade on hover */
+    color: #8e2e60; /* Slightly darker font color on hover */
+    transition: 0.3s;
+}
+
+.shiftDraft {
+    background-color: #fffbaa; /* Pink color with 40% opacity for draft shifts */
+    color: #74710d; /* Darker font color */
+}
+
+.shiftDraft::before {
+    background-color: #716e16; /* Darker pink for the left line */
+}
+
+.shiftDraft:hover {
+    background-color: #eae674aa; /* Lighter shade on hover */
+    color: #716e16; /* Slightly darker font color on hover */
+    transition: 0.3s;
+}
+
+.shiftUnallocated {
+    background-color: #fdddc6; /* Yellow for unallocated shifts */
+    color: #f27609; /* Text color same as line color */
+}
+
+.shiftUnallocated::before {
+    background-color: #f27609; /* Darker yellow for the left line */
+}
+
+/* Hover effect for unallocated shifts */
+.shiftUnallocated:hover {
+    background-color: #ffd2a1; /* Slightly darker shade of the unallocated shift color */
+    color: #a65000; /* Darker orange text for good contrast */
+    transition: 0.3s;
+}
+
+/* Shift description text */
+.shiftDescription {
+    font-size: 9px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    text-align: center;
+}
+
+/* Time and client name styling */
+.shiftTime,
+.shiftClient {
+    font-size: 9px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.popoverContent {
+    padding: 12px;
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 320px;
+    font-size: 13px;
+    color: #333;
+}
+
+.shiftDetails {
+    margin-bottom: 14px;
+    padding: 8px 0;
+}
+
+.shiftField {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Compact view css */
+/* Compact view specific styles */
+.compactView .schedulerRowShifts .schedulerCell,
+.compactView .schedulerRowAvailability .schedulerCellAvailability {
+    width: 45.78px; /* 100% / 30 days */
+    padding: 2px;
+    min-width: 45px; /* Ensure minimum width */
+    font-size: 10px; /* Smaller font for compact view */
+}
+
+.compactView .schedulerRowShifts .schedulerCell:nth-last-child(1) {
+    border-right: 1px solid #ebebeb;
+}
+
+/* Ensure header cells are aligned properly */
+.compactView .schedulerHeader {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.compactView .schedulerHeaderCell {
+    width: 45px; /* Header cells for compact view */
+    min-width: 45px;
+    padding: 2px;
+    font-size: 10px;
+}
+
+.compactView .schedulerContainer {
+    overflow-x: auto;
+}
+
+.compactView .workerItem {
+    width: 120px; /* Smaller worker item width */
+    font-size: 10px; /* Smaller font for worker items */
+}
+
+.schedulerWorkerCell {
+    width: 175px; /* Default width for non-compact views */
+    font-size: 12px; /* Default font size for non-compact views */
+}
+
+.compactView .schedulerWorkerCell {
+    width: 100px !important; /* Force width to 100px */
+    font-size: 10px !important; /* Force font size to 10px */
+}
+
+.compactView .shiftStrip {
+    width: 120px; /* Smaller shift strip width */
+    font-size: 8px; /* Smaller font for shift strips */
+    padding: 2px 4px; /* Reduced padding for compact view */
+}
+
+/* Reduce the size of buttons and other elements in compact view */
+.compactView .buttonIconSmall {
+    font-size: 10px;
+    margin-right: 6px;
+    margin-left: 0px;
+}
+
+/* Compact view specific styles */
+
+/* Set the width and padding consistently for header and scheduler cells */
+.compactView .schedulerHeaderCell,
+.compactView .schedulerCell,
+.compactView .schedulerCellAvailability {
+    width: 45.78px; /* Set a consistent width */
+    min-width: 45px;
+    padding: 2px; /* Set consistent padding */
+    margin: 0; /* Ensure no margin */
+    font-size: 8px; /* Smaller font size for compact view */
+    box-sizing: border-box; /* Include padding and border in the element's width and height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevent content overflow */
+    white-space: nowrap; /* Prevent text wrapping */
+    text-align: center; /* Center align text */
+}
+
+.compactView .popoverContent {
+    font-size: 11px;
+    padding: 8px;
+}
+
+/* Adjust header cell for compact view */
+.compactView .schedulerHeaderCell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+/* Make sure the date and day are stacked */
+.compactView .schedulerHeaderCell .date,
+.compactView .schedulerHeaderCell .day {
+    line-height: 1.1;
+    margin: 0; /* Ensure no margin */
+}
+
+.compactView .schedulerHeaderCell .date {
+    font-weight: bold;
+}
+
+.compactView .schedulerHeaderCell .day {
+    font-weight: normal;
+    color: #666;
+}
+
+.compactView .schedulerRowShifts,
+.compactView .schedulerRowAvailability {
+    display: flex;
+    align-items: center;
+}
+
+/* Adjust other compact view elements */
+/* Worker Item consistency in compact view */
+.compactView .workerItem {
+    width: 100px; /* Smaller width for worker items */
+    font-size: 10px; /* Smaller font size */
+    margin: 0; /* Ensure no margin */
+    padding: 2px; /* Consistent padding */
+    text-align: center;
+}
+
+.compactViewShiftHours {
+    font-size: 10px;
+}
+
+/* Adjust the shift strip size */
+.compactView .shiftStrip {
+    width: 45px;
+    height: 20px;
+    padding: 2px;
+    font-size: 6px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0; /* Ensure no margin */
+}
+
+.compactView .shiftStrip {
+    width: 30px;
+    height: 45px;
+    padding: 2px;
+    font-size: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.compactView .shift {
+    font-size: 8px;
+    padding: 2px;
+    justify-content: flex-start;
+}
+
+/* Display icons only in compact view */
+.compactView .shiftIcon {
+    margin-left: 10px;
+    /* color: #555; */
+    font-size: 14px;
+}
+
+.shift {
+    position: relative;
+    padding: 5px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.shiftTime {
+    font-size: 9px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+/* Hide text and full details in compact view */
+.compactView .shiftStrip .shiftDescription,
+.compactView .shiftStrip .shiftTime,
+.compactView .shiftStrip .shiftClient {
+    display: none; /* Hide all text */
+}
+
+/* Tooltip styling for detailed info */
+.compactView .shiftTooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 10px;
+    white-space: nowrap;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Show tooltip on hover */
+.compactView .shiftStrip:hover .shiftTooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Shift Strip Hover Effect */
+.compactView {
+    background-color: #e0e0e0;
+}
+
+.shiftPast,
+.shiftPresent,
+.shiftFuture {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0px;
+}
+
+.shiftPast {
+    background-color: #cdcdcd; /* Example: light grey for past shifts */
+    color: #808080; /* Grey text */
+}
+
+.shiftPresent {
+    background-color: #d0e2fe; /* Example: light blue for present shifts */
+    color: #3081ec; /* Blue text */
+}
+
+.shiftFuture {
+    background-color: #caf0d9; /* Example: light green for future shifts */
+    color: #17bf5f; /* Green text */
+}
+
+.shiftPendingApproval {
+    background-color: #f48fbd66; /* Example: pink for pending approval */
+    color: #b35f8b;
+}
+
+.shiftDraft {
+    background-color: #fffbaa; /* Example: yellow for drafts */
+    color: #74710d;
+}
+
+.shiftUnallocated {
+    background-color: #fdddc6; /* Example: orange for unallocated */
+    color: #f27609;
+}
+
+.icon {
+    margin-right: 8px;
+    color: #666;
+}
+
+.fieldValue {
+    color: #333;
+    font-weight: 500;
+    margin-left: 4px;
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.divider {
+    margin: 10px 0;
+    border: 0;
+    height: 1px;
+    background: #ddd;
+}
+
+.popoverActions {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 16px;
+}
+
+.actionButton .css-i4bv87-MuiSvgIcon-root {
+    text-transform: none;
+    font-size: 10px;
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+.approvalButton {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.approvalButton:hover {
+    background-color: #0056b3;
+}
+
+.editButton {
+    background-color: transparent;
+    color: #333;
+    padding: 4px;
+    border-radius: 8px;
+}
+
+.editButton:hover {
+    background-color: #e0e0e0;
+}
+
+.actionButton {
+    padding: 4px 8px;
+    font-size: 11px;
+    text-transform: none;
+    min-width: 40px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.saveDraftButton:hover {
+    background-color: #d3d3d3;
+}
+
+.approvalButton:hover {
+    background-color: #9fd3ff;
+}
+
+.legend {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #f4f4f4;
+    padding: 10px;
+    z-index: 9;
+}
+
+.legendItem {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    font-size: 15px;
+}
+
+.legendColor {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 3px;
+}
+
+.refreshButton {
+    border-color: blue;
+    color: blue;
+    background-color: white;
+}
+
+.refreshButton:hover {
+    background-color: rgba(0, 0, 255, 0.05);
+}
+
+.filterButton {
+    background-color: transparent; /* Primary blue color */
+    color: #007bff; /* White text color */
+    border: none; /* Remove default border */
+    font-size: 12px; /* Small, neat font size */
+    font-weight: 600;
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.2s ease, box-shadow 0.2s ease; /* Smooth transition effects */
+    box-shadow: none;
+    border: 1px solid #007bff;
+    text-transform: capitalize;
+    min-width: 120px;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.filterButton:hover {
+    background-color: #007bff; /* Darker blue on hover */
+    color: #fff;
+    transition: 0.1s;
+}
+
+.filterButton:active {
+    background-color: #004494; /* Even darker blue on click */
+    box-shadow: none; /* Remove shadow on click */
+}
+
+.filterButton:focus {
+    outline: none; /* Remove default focus outline */
+}
+
+.customModal .modal-dialog {
+    max-width: 800px;
+}
+
+.scrollableList {
+    max-height: 400px;
+    /* overflow-y: auto; */
+}
+
+.fc-button {
+    background-color: #1abc9c !important;
+    border: none !important;
+    color: white !important;
+    padding: 6px 12px !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    font-size: 14px !important;
+    margin: 4px 2px !important;
+    cursor: pointer !important;
+    border-radius: 6px !important;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.fc-button:hover {
+    /* background-color: #16a085 !important; */
+    transform: scale(1.05);
+}
+
+.fc-button:disabled {
+    background-color: #bdc3c7 !important;
+    cursor: not-allowed !important;
+}
+
+.fc-button-primary:disabled {
+    background-color: #bdc3c7 !important;
+}
+
+.fc-icon {
+    font-size: 16px !important;
+}
+
+.fc-event {
+    color: white;
+    border: none;
+    padding: 8px;
+    font-size: 14px !important;
+    white-space: normal;
+    word-wrap: break-word;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.fcEventContent {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.fcEventContent:hover {
+    background-color: transparent !important;
+    cursor: pointer !important;
+}
+
+.fc-event-title {
+    font-weight: bold;
+}
+
+.fc-event-time {
+    font-weight: bold;
+}
+
+.fc-direction-ltr .fc-daygrid-event.fc-event-end,
+.fc-direction-rtl .fc-daygrid-event.fc-event-start {
+    margin-right: 2px;
+    font-size: 12px !important;
+}
+
+.legendItem {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    font-size: 15px;
+}
+
+.legendColor {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 3px;
+}
+
+.legendPast {
+    background: linear-gradient(to right, #6c757d, #adb5bd);
+}
+
+.legendCurrent {
+    background: linear-gradient(to right, #ff8c00, #ffb84d);
+}
+
+.legendFuture {
+    background: linear-gradient(to right, #20c997, #63e6be);
+}
+
+.customModalRoster {
+    max-width: 550px;
+}
+
+/* Client Roster  Modal */
+.customModal {
+    max-width: 1400px; /* Modal width as specified */
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.modalHeader {
+    border-bottom: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    letter-spacing: 0.5px;
+}
+
+.inputGroup {
+    margin-bottom: 20px;
+}
+
+.searchInput {
+    border: 1px solid #ced6e0;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 1rem;
+    background-color: #f8f9fa;
+    transition: border-color 0.3s ease;
+}
+
+.searchInput:focus {
+    border-color: #5e72e4;
+    box-shadow: 0 0 5px rgba(94, 114, 228, 0.3);
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(
+    auto-fill,
+    minmax(250px, 1fr)
+  ); /* Better spacing for cards */
+    gap: 20px;
+    padding: 20px;
+}
+
+.gridItem {
+    background-color: #ffffff;
+    border-radius: 12px; /* Softer corners */
+    padding: 20px; /* Increased padding for a spacious feel */
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.1); /* Defined card shadow */
+    border: 1px solid #eaeaea; /* Light border for definition */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effect */
+}
+
+.clientID,
+.clientName,
+.shiftCount {
+    font-size: 16px; /* Slightly larger text for readability */
+    color: #2c3e50;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.clientID {
+    color: #5e72e4;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.clientName {
+    color: #34495e;
+    font-weight: 600;
+}
+
+.rosterList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px; /* More spacing between roster items */
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.rosterButton {
+    background-color: #d9eaff; /* Softer blue background */
+    color: #5e72e4;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.rosterButton:hover {
+    background-color: #bdd5ff; /* Hover effect for buttons */
+}
+
+.shiftCount {
+    color: #e67e22;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.noRoster {
+    color: #95a5a6;
+    font-size: 0.9rem;
+}
+
+.modalFooter {
+    border-top: none;
+    padding-top: 15px;
+    justify-content: center;
+}
+
+.createButton {
+    background-color: #5e72e4;
+    color: white;
+    padding: 6px 18px;
+    font-size: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.createButton:hover {
+    background-color: #4865c2;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* rosterApproval.module.css */
+
+.rosterApprovalContainer {
+    padding: 20px;
+}
+
+.shiftList {
+    list-style-type: none;
+    padding: 0;
+}
+
+.shiftItem {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+.shiftItem div {
+    margin-bottom: 5px;
+}
+
+.shiftItem button {
+    margin-top: 10px;
+}
+
+/* Modal Styles */
+/* Updated Modal Styles */
+.modalContent {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.modalContent h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalContent p {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+.modalContent .modalIcon {
+    font-size: 40px;
+    color: #ff6b6b;
+    margin-bottom: 15px;
+}
+
+.modalContent .closeButton {
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 12px; /* Smaller padding */
+    font-size: 12px; /* Smaller font size */
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalContent .closeButton:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(26, 188, 156, 0.4);
+}
+
+.modalContent .closeButton:active {
+    background-color: #148f77;
+}
+
+/* Optional: Add a small icon to the button */
+.modalContent .closeButton::before {
+    content: "\2713"; /* Checkmark icon */
+    font-size: 16px; /* Smaller icon size */
+    margin-right: 6px; /* Adjusted margin */
+    color: white;
+}
+
+/* Add this new class for sticky columns */
+.stickyColumn {
+    position: sticky;
+    left: 0;
+    background-color: white; /* Ensure the background covers underlying content */
+    z-index: 3; /* Higher z-index to stay above other cells */
+    /* Optional: Add a box-shadow for visual separation */
+}
+
+.loadingOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.7);
+    z-index: 10;
+}
+
+/* Identifiers Container */
+.identifiersContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+/* Individual Identifier */
+.identifier {
+    font-size: 14px;
+    color: #333;
+}
+
+.warningIcon {
+    /* Existing styles */
+    color: red;
+    font-size: 20px;
+    /* Animation properties */
+    animation: upDown 2s infinite;
+    /* Optional: Add a slight delay to make it more subtle */
+    animation-delay: 0.5s;
+}
+
+.overtime {
+    color: red !important;
+}
+
+.minimalDialogTitleText {
+    font-size: 20px;
+    color: #272727;
+    font-weight: 500;
+    font-family: "Metropolis", "Helvetica Neue", Helvetica;
+    display: flex;
+    align-items: center;
+}
+
+.closeButton {
+    border-radius: 20px !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 5px 15px !important;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer; /* Ensure pointer cursor on hover */
+    margin-right: 8px !important;
+}
+
+/* myButtons.module.css */
+
+.approveButton {
+    border-radius: 20px !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 5px 15px !important;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer; /* Ensure pointer cursor on hover */
+    margin-right: 8px !important;
+}
+
+/* Hover + focus + active states */
+.approveButton:hover {
+    background-color: #115293; /* Slightly darker primary on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.approveButton:active {
+    transform: translateY(0);
+}
+
+.approveButton:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+.rejectButton {
+    border-radius: 20px !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 5px 15px !important;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.rejectButton:hover {
+    background-color: #a82c2c; /* Slightly darker error on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.rejectButton:active {
+    transform: translateY(0);
+}
+
+.rejectButton:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+/* Define the keyframes for the up and down movement */
+@keyframes upDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px); /* Moves up by 5px */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Worker Item Container */
+.workerItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 175px;
+    max-width: 175px;
+    border-bottom: 1px solid #cdcdcd;
+    border-radius: 0px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Profile Section */
+.workerProfile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 4px;
+}
+
+/* Avatar Styling */
+.workerAvatar {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+}
+
+/* Worker Details Section */
+.workerDetails {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 0 5px;
+    overflow: hidden;
+}
+
+.workerName {
+    font-size: 12px;
+    font-weight: 600;
+    color: #2637a2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    margin-left: 4px;
+    margin-top: 4px;
+  justify-content: start;
+}
+
+/* Combined view styles */
+/* .combinedViewContainer {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.resizableDivider {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1rem;
+  background-color: rgba(229, 231, 235, 0.5);
+  cursor: ns-resize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  transition: background-color 0.2s;
+}
+
+.resizableDivider:hover {
+  background-color: rgba(139, 92, 246, 0.2);
+}
+
+.resizableDivider.dragging {
+  background-color: rgba(139, 92, 246, 0.2);
+}
+
+.resizableDivider::after {
+  content: '';
+  width: 3rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background-color: rgb(156, 163, 175);
+}
+
+.splitSection {
+  position: absolute;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  transition: height 0.2s;
+} */
+
+/* Shift Info Section */
+.workerShiftInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex: 0 0 55px;
+}
+
+.shiftHours {
+    font-size: 11px;
+    font-weight: 600;
+    color: #000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.payRate {
+    font-size: 11px;
+    color: #000;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Optional: Sticky Column Styling */
+.stickyColumn {
+    position: sticky;
+    left: 0;
+    background-color: #ffffff;
+    z-index: 1;
+    padding-top: 6px;
+}
+
+.publicHoliday {
+    background-color: #ffcccc !important; /* Light red background */
+    color: #d8000c !important; /* Dark red text */
+}
+
+.workerItem {
+    display: flex;
+    flex-direction: column; /* Force column layout */
+
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.workerTopRow {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Align image and name vertically */
+    width: 100%; /* Ensure it takes full width */
+    justify-content: center;
+    position: relative;
+    top: 0px;
+}
+
+.workerAvatar {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+}
+
+.workerNameContainer {
+    display: flex;
+    flex-direction: column; /* Stack name and role vertically */
+}
+
+.workerName {
+    font-weight: bold;
+    color: #000;
+    font-size: 14px;
+}
+
+.workerBottomRow {
+    display: flex;
+    flex-direction: row; /* Row layout for hours and rate */
+    justify-content: space-between; /* Space out items */
+    width: 100%; /* Stretch across full width */
+    font-size: 12px;
+    color: #000;
+    padding: 5px;
+    background-color: #e0e7ff;
+    border-radius: 0px;
+}

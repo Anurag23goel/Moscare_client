@@ -1,0 +1,35 @@
+name: Moscare Client
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: checkout repo
+      uses: actions/checkout@v4
+
+    - name: Log in to Amazon ECR
+      run: |
+        aws ecr get-login-password --region ap-southeast-2 | docker login --username AWS --password-stdin 891377166973.dkr.ecr.ap-southeast-2.amazonaws.com
+      env:
+        AWS_ACCESS_KEY_ID: AKIA47CRYFJ6XO6JYTSP
+        AWS_SECRET_ACCESS_KEY: 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
+
+    - name: Build the Docker image
+      run: |
+        docker build -t moscare-client .
+        docker tag moscare-client:latest 891377166973.dkr.ecr.ap-southeast-2.amazonaws.com/moscare-client:latest
+        docker push 891377166973.dkr.ecr.ap-southeast-2.amazonaws.com/moscare-client:latest
+
+    - name: Deploy to ECS
+      run: |
+        aws ecs update-service --cluster moscare-client-clusters --service moscare-client-service --force-new-deployment --region ap-southeast-2
+      env:
+        AWS_ACCESS_KEY_ID: AKIA47CRYFJ6XO6JYTSP
+        AWS_SECRET_ACCESS_KEY: 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

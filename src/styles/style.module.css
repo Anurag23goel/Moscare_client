@@ -1,0 +1,584 @@
+.MainContainer {
+    border-radius: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 7rem;
+    margin-bottom: 2rem;
+
+}
+
+.subHeading {
+    font-size: 25px;
+}
+
+.suggestionsList {
+    width: 30%;
+    list-style: none;
+    padding: 0;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 1000;
+    position: absolute;
+}
+
+.suggestionsList li {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.suggestionsList li:hover {
+    background-color: #f0f0f0;
+}
+
+
+.fontFamilyMetro {
+    font-family: "Metropolis", sans-serif !important;
+}
+
+.errorMessage {
+    color: red;
+    font-size: 12px;
+    margin-top: 0.25rem;
+    word-wrap: break-word;
+}
+
+
+.header {
+    font-weight: bold;
+    background-color: #f0f0f0; /* Light gray background for headers */
+}
+
+.data_table {
+    border-collapse: collapse;
+    width: 100%;
+    height: 100%;
+    background: #f9f9f9;
+}
+
+.highlight {
+    background-color: yellow !important;
+}
+
+.agreement-ended {
+    background-color: #ff0000; /* Red */
+}
+
+.agreement-alert-date-reached {
+    background-color: #ffff00; /* Yellow */
+}
+
+.forecast-balance-exceeded {
+    background-color: #ffa500; /* Orange */
+}
+
+.actual-balance-exceeded {
+    background-color: #008000; /* Green */
+}
+
+/* You can add more styles as needed */
+
+.beautifulCard {
+    border-radius: 20px;
+    width: 260px;
+    max-height: 70vh;
+    overflow-y: auto !important;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    background: linear-gradient(
+            135deg,
+            #ece9e6,
+            #ffffff
+    ); /* Light gradient background */
+    padding: 20px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    color: #333; /* Dark text for better contrast */
+}
+
+/* Custom scrollbar */
+.beautifulCard::-webkit-scrollbar {
+    width: 6px;
+}
+
+.beautifulCard::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 3px;
+}
+
+.beautifulCard::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+/* Container for List Items */
+.listItemContainer {
+    padding: 8px 0;
+}
+
+/* For Calendar */
+.hideDefinedRange .rdrDefinedRangesWrapper {
+    display: none;
+}
+
+/* List Item Styling */
+.listItem {
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    cursor: pointer;
+    color: #333;
+    background: linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.8),
+            rgba(240, 240, 240, 0.8)
+    ); /* Light gradient background */
+    margin-bottom: 10px;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Softer shadow */
+}
+
+.listItem.selected {
+    color: white;
+    background: linear-gradient(
+            135deg,
+            #ffafbd,
+            #ffc3a0
+    ); /* Vibrant gradient for selected */
+    font-weight: bold;
+}
+
+.listItem:hover {
+    background: linear-gradient(
+            135deg,
+            #f0f0f0,
+            #e0e0e0
+    ); /* Light gradient on hover */
+    transform: scale(1.05);
+}
+
+.listItem.selected:hover {
+    transform: scale(1.08);
+}
+
+/* Text Styling */
+.listItemText {
+    text-align: center; /* Center text */
+    font-size: 16px; /* Larger font */
+    font-weight: 600; /* Medium weight */
+    letter-spacing: 0.5px; /* Slight spacing for readability */
+}
+
+/* Divider Styling */
+.divider {
+    margin: 0 10px;
+    background-color: #ddd; /* Lighter color */
+}
+
+.QuoteContainer {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 30px;
+    margin-top: 1rem;
+    /* margin-bottom: 3rem; */
+}
+
+.QuoteUpdateContainer {
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px;
+    background-color: #f9f9f9;
+    padding: 30px 30px 30px 30px;
+    margin-top: 1rem;
+    /* margin-bottom: 3rem; */
+}
+
+/*  */
+
+.userDivStyle {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.blur-background {
+    filter: blur(5px);
+    transition: filter 0.3s ease-in-out;
+}
+
+/* Timesheet */
+
+.modalContainer {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    max-width: 700px; /* Reduced width */
+    width: 90%;
+    margin: auto;
+    margin-top: 5%; /* Reduced margin to show button */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 20px; /* Space between options and calendar */
+    align-items: flex-start;
+}
+
+.modalTitle {
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.divider {
+    margin-top: 10px;
+}
+
+.leftOptions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px; /* Space between options */
+    padding: 10px 20px;
+}
+
+.weekOption {
+    cursor: pointer;
+    color: #3f51b5;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.weekOption:hover {
+    color: #2c3e50;
+}
+
+.verticalDivider {
+    height: 100%;
+    margin-left: 20px;
+}
+
+.calendarContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Space between calendar and apply button */
+    width: 100%;
+}
+
+.datePicker {
+    max-width: 400px; /* Adjust calendar width */
+}
+
+.selectedRangeDisplay {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.applyButton {
+    width: 100%; /* Full width button */
+    padding: 10px 0;
+    margin-top: 10px; /* Adjusted spacing */
+}
+
+.super-app-theme--mismatch {
+    background-color: lightcoral;
+}
+
+.super-app-theme--match {
+    background-color: lightgreen;
+}
+
+.SettingsContainer {
+    max-width: 1500px !important;
+    border-radius: 8px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    /* background-color: #fff; */
+    padding: 20px;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.locationContainer {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 20px;
+}
+
+.columnChooserButton {
+    margin-bottom: 10px;
+}
+
+.dialogPaper {
+    min-width: 300px;
+    max-width: 400px;
+}
+
+.MuiFormControlLabel-root {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.MuiTextField-root {
+    margin-bottom: 10px;
+}
+
+.dropdown-container {
+    position: relative;
+}
+
+.dropdown-button {
+    background-color: #007bff; /* Primary color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px; /* Rounded corners */
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%; /* Position below the button */
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure it appears above other elements */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.dropdown-item {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    text-align: left;
+    background: transparent; /* Transparent background for items */
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1; /* Hover effect */
+}
+
+/* client Profile select page starts */
+/* styles.module.css */
+
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.contentContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.loaderContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 15px 30px 0px 30px;
+    width: 100%;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.headerContainer {
+    display: flex;
+    align-items: baseline; /* Vertically centers the items */
+    gap: 16px; /* Adds space between the title and subtitle */
+    /* margin-bottom: 20px; */
+}
+
+.pageHeading {
+    font-size: 26px;
+    font-weight: 600;
+    margin: 0; /* Removes default margin */
+    font-size: 26px; /* Adjust as needed */
+    font-family: "Metropolis" !important;
+}
+
+.pageSubtitle {
+    font-weight: 500;
+    font-size: 13px; /* Smaller font size */
+    color: rgba(110, 110, 115, 1); /* Light gray color */
+    margin: 0; /* Removes default margin */
+    letter-spacing: 0.4px;
+}
+
+.tableContainer {
+    width: 100%;
+}
+
+.customMaterialButton {
+    border-radius: 25px !important;
+    text-transform: none !important;
+    font-size: 12px !important;
+}
+
+.fontSize14 {
+    font-size: 14px !important;
+}
+
+.fontSize12 {
+    font-size: 12px !important;
+}
+
+.fontSize13 {
+    font-size: 13px !important;
+    font-family: "Metropolis", sans-serif !important;
+}
+
+.marBt5 {
+    margin-bottom: 10px !important;
+}
+
+.zIndex {
+    z-index: 9999999 !important;
+}
+
+.TimesheetButton,
+.TimesheetButtonDate {
+    border-radius: 30px !important;
+    padding: 9px 18px !important;
+    margin-right: 14px !important;
+    background-color: rgba(213, 213, 213, 1) !important;
+    box-shadow: none !important;
+    color: rgba(29, 29, 31, 1) !important;
+    border: none !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    gap: 8px;
+}
+
+.TimesheetButtonClient {
+    border-radius: 10px !important;
+    padding: 9px 18px !important;
+    margin-left: 14px !important;
+    background-color: #f5f5f5 !important;
+    box-shadow: none !important;
+    color: rgba(29, 29, 31, 1) !important;
+    border: none !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    height: 42px !important;
+}
+
+.TimesheetButtonDate {
+    border-radius: 10px !important;
+}
+
+.spaceBetween {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profileContainer {
+    background-color: #f9f9f9 !important;
+    border-radius: 15px !important;
+    border: 1px solid !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) !important;
+    padding: 2rem !important;
+    margin: 10px !important;
+}
+
+.MaintContainer {
+    margin: 0 10px !important;
+}
+
+.newUIButton {
+    border: none !important;
+    outline: none !important;
+    padding: 10px 20px !important;
+    border-radius: 24px !important;
+    background-color: var(--active-tab-bg-color);
+    color: var(--active-tab-color);
+}
+
+.maintenanceBtn {
+    border: none !important;
+    outline: none !important;
+    padding: 8px 20px !important;
+    border-radius: 24px !important;
+    /* margin-right: 10rem !important; */
+}
+
+.MaintBtn {
+    border: none !important;
+    outline: none !important;
+    padding: 8px 20px !important;
+    border-radius: 12px !important;
+}
+
+.activeButton {
+    background-color: var(
+            --primary-color
+    ); /* Replace with your actual primary color */
+    color: white; /* Ensure text is readable */
+    /* Optional: Add a shadow or border to highlight the active button */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.accountingContainer {
+    border: 1px solid #3b3b3b;
+    border-radius: 15px;
+    padding: 0 1rem;
+    /* background-color: #84bb6509; */
+}
+
+.tabDataContainer {
+    background-color: #f9f9f9;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-left: 1px solid;
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    padding: 2rem;
+    align-items: flex-start;
+}
+
+/* Remove Scrollbar Strip */
+.noScrollbar {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+.noScrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Edge */
+}
+
+.clientBudgetLabel {
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    font-family: "Metropolis", sans-serif !important;
+    letter-spacing: 0.2px; /* Add additional styles for stronger specificity */
+}
+
+.clientBudgetAmount {
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    font-family: "Metropolis", sans-serif !important;
+    letter-spacing: 0.3px !important;
+    color: inherit !important; /* Override color if it's being set elsewhere */
+}
+
+.clientProfileCard {
+    border: 1px solid #555555 !important;
+}

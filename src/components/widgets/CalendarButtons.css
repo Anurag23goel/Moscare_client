@@ -1,0 +1,57 @@
+/* Custom Calendar Button Styles */
+.fc .fc-button-primary {
+    @apply px-4 py-2 rounded-xl glass dark:glass-dark border border-gray-200/50 dark:border-gray-700/50 hover:bg-gray-50/50 dark:hover:bg-gray-800/50 transition-colors flex items-center gap-2 !important;
+    background: transparent !important;
+    border: none !important;
+    color: rgb(75, 85, 99) !important;
+  }
+  
+  .fc .fc-button-primary:not(:disabled).fc-button-active,
+  .fc .fc-button-primary:not(:disabled):active {
+    @apply bg-gradient-to-r from-purple-500 to-pink-600 text-white shadow-lg !important;
+    border: none !important;
+  }
+  
+  .fc .fc-button-primary:disabled {
+    @apply opacity-50 cursor-not-allowed !important;
+    background: transparent !important;
+    border: none !important;
+  }
+  
+  .fc .fc-today-button {
+    @apply bg-gradient-to-r from-purple-500 to-pink-600 text-white shadow-lg !important;
+    border: none !important;
+  }
+  
+  .fc .fc-today-button:disabled {
+    @apply opacity-50 !important;
+  }
+  
+  /* Calendar Header */
+  .fc .fc-toolbar-title {
+    @apply text-xl font-semibold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent !important;
+  }
+  
+  /* Calendar Container */
+  .fc {
+    @apply glass dark:glass-dark rounded-2xl border border-gray-200/50 dark:border-gray-700/50 p-6 !important;
+    background: transparent !important;
+  }
+  
+  /* Calendar Grid */
+  .fc .fc-scrollgrid {
+    @apply border-gray-200/50 dark:border-gray-700/50 !important;
+  }
+  
+  .fc th {
+    @apply border-gray-200/50 dark:border-gray-700/50 !important;
+  }
+  
+  .fc td {
+    @apply border-gray-200/50 dark:border-gray-700/50 !important;
+  }
+  
+  /* Today Cell */
+  .fc .fc-day-today {
+    @apply bg-purple-50/50 dark:bg-purple-900/20 !important;
+  }

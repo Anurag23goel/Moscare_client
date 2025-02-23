@@ -1,0 +1,179 @@
+
+.fontFamily {
+    font-family: "Metropolis", sans-serif !important;
+}
+
+.container {
+    padding: 20px;
+}
+
+.settings_formControl__UiU2F {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.saveButton {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+.saveButton_2 {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    font-size: 11px;
+    margin-right: 20px;
+    margin-top: -2rem;
+}
+
+.tabs {
+    font-family: "Metropolis", sans-serif !important;
+    /* margin-bottom: 20px; */
+}
+
+.tabContent {
+    /* padding: 20px; */
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.03);
+}
+
+.financeContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adds space between blocks */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    font-family: "Metropolis", sans-serif !important;
+}
+
+.card {
+    /* padding: 20px; */
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.cardHeader {
+    background-color: #e0f7fa; /* Light blue background for the header */
+    padding: 10px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-family: "Metropolis", sans-serif !important;
+
+}
+
+.cardContent {
+    padding: 0 1.5rem 1.5rem 1.5rem !important;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem !important;
+    font-family: "Metropolis", sans-serif !important;
+}
+
+.cardContentForColorRostering {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem !important; /* Space between the form fields */
+}
+
+.formControl {
+    width: 100%;
+    /* margin-bottom: 1rem;
+    margin-top: 1rem; */
+}
+
+.inputField {
+    margin-bottom: 10px;
+}
+
+.selectField {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.radioGroup {
+    display: flex;
+    justify-content: space-around;
+}
+
+.MuiFormControl-root {
+    margin-bottom: 16px;
+}
+
+.financeContainer {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+}
+
+.card {
+    /* padding: 1.5rem; */
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin-bottom: 2rem;
+}
+
+.cardHeader {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-weight: 600;
+    text-align: center;
+    font-family: "Metropolis", sans-serif !important;
+}
+
+
+/* .formControl {
+  margin-bottom: 1rem;
+} */
+
+.rowSpacing {
+    margin-bottom: 1rem;
+}
+
+.buttonRow {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.checkboxLabel {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.infoText {
+    margin-top: 0.5rem;
+    color: gray;
+    font-size: 0.875rem;
+}
+
+.typography {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.typo {
+    font-size: 12px;
+    margin-bottom: 1rem;
+}
+
+.divider {
+    border: 1px solid #a0a0a0;
+    margin: 1.5rem 0;
+    background-color: #e0e0e0;
+}

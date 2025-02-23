@@ -1,0 +1,355 @@
+.AvailabilityContainer {
+    margin: auto;
+    max-width: 100% !important;
+    margin-bottom: 50px;
+    padding: 4px;
+}
+
+.instructions {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+.headerButtons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.actionButton {
+    font-size: 0.75rem; /* Smaller font size */
+    padding: 0.4rem 0.8rem; /* Smaller padding */
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.actionButton:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.calendarGrid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.dayCard {
+    padding: 10px;
+    border-radius: 12px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Very minimal shadow */
+    background-color: white;
+    position: relative;
+}
+
+.todayCard {
+    border: 1px solid #007bff !important;
+    box-shadow: 0 2px 6px rgba(0, 123, 255, 0.15); /* Reduced shadow */
+    border-radius: 16px;
+    transform: scale(1.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.todayCard::before {
+    content: "Today";
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #ff6b6b;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.available {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+.unavailable {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+.partiallyAvailable {
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+}
+
+.dayLabel {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.dateLabel {
+    font-size: 12px;
+    color: #6c757d;
+    margin-bottom: 0.75rem;
+}
+
+.buttonGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.statusButton {
+    font-size: 0.75rem;
+    padding: 0.4rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Subtle button shadow */
+}
+
+.statusButton:hover {
+    background-color: #e2e6ea;
+    transform: translateY(-2px);
+}
+
+.timeLabel {
+    font-size: 10px;
+    margin-top: 0.5rem;
+    color: #495057;
+    font-weight: 500;
+}
+
+.copyPasteGroup {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.copyPasteButton {
+    font-size: 12px;
+    padding: 5px 8px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* Subtle button shadow */
+}
+
+.copyPasteButton:hover {
+    background-color: #e2e6ea;
+    transform: translateY(-2px);
+}
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modalContent {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    position: relative;
+    margin-top: 50px;
+}
+
+.modalTitle {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tableContainer {
+    max-height: 400px; /* Set a max height to allow scrolling */
+    overflow-y: auto;
+    margin-bottom: 1rem;
+}
+
+.table th,
+.table td {
+    border: 1px solid #dee2e6;
+    padding: 0.75rem;
+    text-align: center;
+}
+
+.table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+}
+
+.table input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+}
+
+.modalButtons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    position: sticky;
+    bottom: 0;
+    background-color: white;
+    padding: 1rem;
+    border-top: 1px solid #dee2e6;
+}
+
+.bulkActionButton {
+    padding: 0.4rem 0.8rem; /* Smaller padding */
+    font-size: 0.75rem; /* Smaller font size */
+    border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+    border: none;
+}
+
+.bulkActionButton:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.dialogButton {
+    font-size: 0.75rem; /* Smaller font size */
+    padding: 0.4rem 0.8rem; /* Smaller padding */
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* In workeravailability.module.css */
+
+.addTimeButton {
+    margin-top: 5px;
+    padding: 5px 10px;
+    background-color: #4caf50; /* Example color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.addTimeButton:hover {
+    background-color: #45a049;
+}
+
+/* In workeravailability.module.css */
+
+.removeTimeButton {
+    padding: 2px 5px;
+    background-color: #f44336; /* Example color */
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.removeTimeButton:hover {
+    background-color: #d32f2f;
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.statusButton:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Time ranges and remove icon */
+.timeLabel {
+    margin-top: 10px;
+}
+
+.timeRange {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+    justify-content: center;
+}
+
+/* Add Time button */
+.addTimeButton {
+    padding: 5px 10px;
+    background-color: #4caf50; /* Green */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.addTimeButton:hover {
+    background-color: #45a049;
+}
+
+/* Copy and Paste buttons */
+.copyPasteGroup {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Modal styles for bulk actions */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalContent {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+}
+
+.modalTitle {
+    margin-bottom: 15px;
+}

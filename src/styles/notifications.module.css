@@ -1,0 +1,50 @@
+/* notifications.module.css */
+.notificationItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.notificationItem.read {
+    background-color: #f0f0f0;
+}
+
+.notificationMessage {
+    margin: 0;
+    font-weight: bold;
+}
+
+.notificationMessage.read {
+    font-weight: normal;
+}
+
+.notificationActions {
+    display: flex;
+    gap: 10px;
+}
+
+.notificationButton {
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 5px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notificationButton.markAsRead {
+    background: green;
+    color: white;
+}
+
+.notificationButton.delete {
+    background: red;
+    color: white;
+}

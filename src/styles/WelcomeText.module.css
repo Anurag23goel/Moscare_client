@@ -1,0 +1,41 @@
+/* WelcomeText styles */
+
+.searchBarContainer {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.searchBar {
+    background-color: #f5f5f5;
+    padding: 12px 16px;
+    border-radius: 8px;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.searchBar input {
+    padding: 10px 12px;
+}
+
+.suggestionsContainer {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.suggestionsContainer .MuiListItem-root {
+    cursor: pointer;
+    padding: 12px 16px;
+    transition: background-color 0.3s;
+}
+
+.suggestionsContainer .MuiListItem-root:hover {
+    background-color: #f0f0f0;
+}
+
+.suggestionsContainer .MuiListItemText-primary {
+    font-weight: 500;
+}

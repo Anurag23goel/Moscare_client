@@ -1,0 +1,355 @@
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.instructions {
+    background-color: #f9f9f9;
+    border-left: 4px solid #4caf50;
+    padding: 10px 20px;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: start;
+}
+
+.parentCard {
+    background-color: #ffffff;
+    border: 1px solid #2a2a2a;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 24px;
+    width: 275px;
+    height: 145px;
+    padding: 20px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.parentCard:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.parentCardSelected {
+    background-color: rgba(222, 238, 255, 1); /* Light pastel blue shade */
+    border-color: #002942;
+}
+
+.menuTitle {
+    font-family: "Metropolis";
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    margin-bottom: 15px;
+}
+
+.countContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+
+.countItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    justify-content: space-between;
+}
+
+.countLabel {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    color: #2b2b2b;
+    margin-right: 5px;
+}
+
+.countNumber {
+    font-size: 14px;
+    font-weight: bold;
+    color: #4caf50; /* Green color for visibility */
+}
+
+.navigationButtons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.navigationButtons1 {
+    margin-bottom: 0px;
+}
+
+/* Button Styles */
+.backButton,
+.submitButton {
+    padding: 8px 18px;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+}
+
+/* Back button: gray */
+.backButton {
+    color: #000;
+    margin-right: 10px;
+    border: 1px solid #1e1e1e;
+}
+
+.backButton:hover {
+    background-color: #b3b3b3;
+}
+
+.errorText {
+    color: red;
+    font-size: 0.9rem;
+    margin-left: 10px;
+}
+
+.successMessage {
+    color: green;
+    font-size: 1rem;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.failureMessage {
+    color: red;
+    font-size: 1rem;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Loading Indicator */
+.loading {
+    font-size: 16px;
+    color: #555;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Toggles */
+.toggleSwitch,
+.permissionToggle {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+    margin-left: 10px;
+}
+
+.toggleSwitch input,
+.permissionToggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggleSlider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 22px;
+    transition: 0.4s;
+    width: 40px;
+}
+
+.toggleSlider:before {
+    position: absolute;
+    content: "";
+    height: 19px;
+    width: 19px;
+    left: 2px;
+    right: 2px;
+    bottom: 0px;
+    top: 1.5px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+/* For the main menu toggle (grey when on) */
+.toggleSwitch input:checked + .toggleSlider {
+    background-color: rgb(149, 149, 149);
+}
+
+.toggleSwitch input:focus + .toggleSlider {
+    box-shadow: 0 0 1px #8862f1;
+}
+
+.toggleSwitch input:checked + .toggleSlider:before {
+    transform: translateX(18px);
+}
+
+/* Permission toggle: Green for Read/Write when on */
+.permissionToggle input:checked + .toggleSlider {
+    background-color: #51b351;
+}
+
+.permissionToggle input:focus + .toggleSlider {
+    /* box-shadow: 0 0 1px #4caf50; */
+}
+
+.permissionToggle input:checked + .toggleSlider:before {
+    transform: translateX(18px);
+}
+
+.permissionLabel {
+    margin-left: 10px;
+    font-size: 0.9rem;
+    vertical-align: middle;
+}
+
+.readWriteLabel {
+    color: #4caf50;
+    margin-left: 5px;
+}
+
+.readOnlyLabel {
+    width: 5rem;
+    color: #666;
+    margin-left: 5px;
+}
+
+.breadcrumbs {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.breadcrumbs a {
+    color: #0070f3;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+.childMenuContainer > div {
+    border-bottom: 1px solid #eaeaea;
+    padding: 10px 0;
+}
+
+.permissionWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-width: 200px;
+}
+
+.childIndicator {
+    background: #d5d5d5;
+    color: #000;
+    padding: 6px 20px;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    width: calc(100% + 40px); /* 20px padding on each side = 40px total */
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+.childWithSubBox {
+    position: relative; /* ensure positioning context if needed */
+    padding: 20px;
+}
+
+.subChildIndicator {
+    background: #d5d5d5;
+    color: #000;
+    padding: 5px 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: inline-block;
+    width: calc(100% + 20px); /* 20px padding on each side = 40px total */
+    margin-left: -10px;
+    margin-right: 10px;
+}
+
+.childMenuItemContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Box for all child menus */
+.allChildrenContainer {
+    border: 1px solid #121212;
+    padding: 20px;
+    border-radius: 24px;
+    margin-top: 20px;
+    background-color: #fff;
+}
+
+/* Box for a child that has sub-children and is toggled on */
+.childWithSubBox {
+    background-color: rgba(245, 245, 247, 0.8);
+    border: 1px solid #121212;
+    padding: 10px;
+    border-radius: 24px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.selectAllButton {
+    border: none;
+    letter-spacing: 0.5px;
+    font-size: 12px;
+    margin-right: 10px;
+    padding: 6px 12px;
+    margin-top: 8px;
+    border-radius: 5px;
+    background-color: #0070f3; /* Example color */
+    color: #fff;
+    cursor: pointer;
+}
+
+.selectAllButton:hover {
+    background-color: #005bb5; /* Darker shade on hover */
+}
+
+/* New Styles for Instructional Header */
+
+/* Instructions within the header */
+.instructions {
+    background-color: #f9f9f9;
+    border-left: 4px solid #4caf50;
+    padding: 10px 20px;
+    margin-top: 15px;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+}
+
+.instructions p {
+    margin: 0;
+    line-height: 1.5;
+}

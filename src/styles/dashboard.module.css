@@ -1,0 +1,371 @@
+dashboard.module.css
+.root {
+    flex-grow: 1;
+    padding: 24px; /* Increased padding for better spacing */
+}
+
+.dashBoardRoot {
+    padding: 2rem 0;
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.welcomeText {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.loadingContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.card {
+    /* height: 200px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 24px !important;
+}
+
+.cardIcon {
+    width: 48px;
+    height: 48px;
+}
+
+.iconGreen {
+    /* background-color: #4caf50 !important; */
+    background-color: #9eb300 !important;
+}
+
+.iconRed {
+    /* background-color: #f44336 !important; */
+    background-color: #9eb300 !important;
+}
+
+.iconOrange {
+    /* background-color: #ff9800 !important; */
+    background-color: #9eb300 !important;
+}
+
+.iconBlue {
+    /* background-color: #2196f3 !important; */
+    background-color: #9eb300 !important;
+}
+
+.iconPurple {
+    /* background-color: #9c27b0 !important; */
+    background-color: #9eb300 !important;
+}
+
+.iconCyan {
+    /* background-color: #00bcd4 !important; */
+    background-color: #9eb300 !important;
+}
+
+.cardContent {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.cardGrid {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cardInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2px; /* Space between rows */
+}
+
+.insightsContainer {
+    background-color: #fff;
+    border: 2px solid;
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.insightsRow {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+}
+
+.chartSection {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap !important;
+    margin-bottom: 2rem;
+}
+
+.insightsCol {
+    /* flex: 1; */
+    /* margin-bottom: 1.5rem; */
+    width: 16.67%;
+}
+
+.payersCol {
+    background-color: #f1f1f1;
+    padding: 1rem 2rem;
+    border-radius: 16px;
+}
+
+.payersName {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.payersRevenue {
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.tableContainer {
+    margin-top: 24px; /* Increased margin for better spacing */
+}
+
+.chartContainer {
+    margin-top: 24px; /* Increased margin for better spacing */
+}
+
+.searchContainer {
+    margin-top: 40px; /* Increased margin for better spacing */
+}
+
+.searchPaper {
+    padding: 24px; /* Increased padding for better spacing */
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.searchSection {
+    width: 100%;
+    display: flex;
+    flex: 1 1;
+    flex-wrap: wrap !important;
+}
+
+.searchField {
+    margin-bottom: 16px; /* Increased margin for better spacing */
+}
+
+.chartPaper {
+    padding: 24px 15px 60px; /* Increased padding for better spacing */
+    height: 400px; /* Increased height for better visibility */
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
+    border: 2px solid;
+    border-radius: 24px;
+}
+
+.chartPaper > .MuiTypography-root {
+    margin-bottom: 24px; /* Increased margin for better spacing */
+}
+
+.searchResultsPaper {
+    margin-top: 16px; /* Increased margin for better spacing */
+    padding: 16px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}
+
+.tablePaper {
+    padding: 24px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* New Styles for Available Workers Card */
+.availableWorkersCard {
+    padding: 24px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.availableWorkersHeader {
+    margin-bottom: 16px;
+}
+
+.availableWorkersTable {
+    height: 400px; /* Adjust height as needed */
+    width: '100%';
+}
+
+.shiftNumber {
+    font-family: 'Metropolis', sans-serif !important;
+    font-weight: bold !important;
+    font-size: 40px !important;
+    color: #fff;
+    text-align: right;
+
+}
+
+.titleText {
+    font-family: 'Metropolis', sans-serif !important;
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    color: #1D1D1F;
+}
+
+.shiftText {
+    font-family: 'Metropolis', sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: #1D1D1F;
+    margin-top: 8px;
+    text-align: center;
+}
+
+.iconContainer {
+    background-color: #8862F1;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    width: 135px;
+    height: 135px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    color: white;
+    font-size: 36px;
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 150px;
+}
+
+.cardContentt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Shortcuts Css */
+.addShortcutBtn {
+    position: relative;
+    top: -43px;
+}
+
+.addShortcutBtn button {
+    position: absolute;
+    right: 5%;
+    border: unset;
+    background-color: transparent;
+}
+
+.shortcutList {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: #fff;
+    padding: 0 10px;
+}
+
+.shortcutItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+}
+
+.shortcutItem a {
+    text-decoration: none;
+    font-size: 10px;
+    color: #fff;
+    border-radius: 50%;
+    width: 95px;
+    height: 95px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.removeShortcut {
+    font-size: 10px;
+    color: red;
+    margin: 5px auto 10px;
+    background-color: unset;
+    padding: unset;
+    border: unset;
+}
+
+/* Responsive adjustments */
+@media (max-width: 960px) {
+    .chartPaper {
+        height: 350px;
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        height: 130px; /* Slightly smaller height on mobile */
+    }
+
+    .chartPaper {
+        height: 300px;
+    }
+
+    .searchContainer {
+        margin-top: 24px;
+    }
+
+    .root {
+        padding: 16px; /* Reduced padding on smaller screens */
+    }
+
+    .searchPaper {
+        padding: 16px; /* Reduced padding on smaller screens */
+    }
+
+    .searchField {
+        margin-bottom: 12px; /* Reduced margin on smaller screens */
+    }
+
+    .chartPaper > .MuiTypography-root {
+        margin-bottom: 16px; /* Reduced margin on smaller screens */
+    }
+
+    .searchResultsPaper {
+        margin-top: 12px; /* Reduced margin on smaller screens */
+    }
+
+    .tablePaper {
+        padding: 16px;
+    }
+
+    .col {
+        min-width: 200px; /* Reduced minimum width on smaller screens */
+    }
+}

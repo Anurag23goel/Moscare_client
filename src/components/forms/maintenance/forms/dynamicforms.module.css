@@ -1,0 +1,98 @@
+.container {
+    padding: 2rem;
+    font-family: "Metropolis", sans-serif !important;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    margin-top: 2em;
+}
+
+.createTemplateHeader {
+    font-size: 24px !important;
+    color: #333;
+    margin-bottom: 1rem !important;
+    text-align: center;
+    font-weight: 600;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.row {
+    margin-bottom: 1rem;
+}
+
+.fieldContainer {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.sectionHeader {
+    font-size: 1.5rem !important;
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 0rem !important;
+}
+
+.buttonContainer {
+    display: flex;
+    gap: 1rem;
+}
+
+.addButton,
+.submitButton,
+.removeButton {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.addButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+.addButton:hover {
+    background-color: #0056b3;
+}
+
+.submitButton {
+    background-color: #28a745;
+    color: white;
+    border: none;
+}
+
+.submitButton:hover {
+    background-color: #218838;
+}
+
+.removeButton {
+    background-color: transparent;
+    color: #dc3545;
+    border: 1px solid #dc3545;
+}
+
+.removeButton:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+.submissionStatus {
+    font-size: 1rem;
+    color: #28a745;
+    margin-top: 1.5rem;
+    text-align: center;
+    font-weight: 500;
+}
